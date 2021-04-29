@@ -20,6 +20,7 @@ popular: true
 # Purpose
 Create VIP for HA configuration
 
+<img src="/assets/images/haproxy.png" width="50%" height="50%">
 
 # What is keepalived ?
 :VRRP 기능을 이용하는 서버 다중화 도구

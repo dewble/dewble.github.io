@@ -186,6 +186,7 @@ listen K8s_10.50.103.133_8443
         #email-alert from lvs@joongang.co.kr
         #email-alert to kim.hyoungju@joins.com
 
+## admin page
 listen stats
         mode http
         bind 10.50.103.133:80
@@ -206,6 +207,12 @@ root@AJTV005 [/etc/haproxy]haproxy -f /etc/haproxy/haproxy.cfg
 ```bash
 systemctl enable haproxy && systemctl restart haproxy && systemctl status haproxy
 ```
+
+# HAproxy admin page
+<center><img src="/assets/images/haproxy.png" width="150%" height="150%"></center>
+HAProxy 에서 제공하는 stats 페이지에서 통신 상태를 확인할 수 있다.
+
+
 
 # slave 서버에서 VIP 확인이 안될 경우
 ## Edit sysctl.conf
