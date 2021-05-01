@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "JM Blog" # 인터넷 탭창 Meta 태그에 들어가는 영역 , masthead_title등이 없으면 기본값으로 나온다.
+title                    : "JM Engineering Blog" # 인터넷 탭창 Meta 태그에 들어가는 영역 , masthead_title등이 없으면 기본값으로 나온다.
 title_separator          : "-"
 subtitle                 : "love learning ;)" # 부제목으로 블로그 이름 밑에 작게 표시
 name                     : "Jongmin Han"
@@ -26,7 +26,7 @@ baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "dewble/dewble.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "JM blog"  # 홈페이지 최 상탄에 들어갈 타이틀
+masthead_title           : "JM Engineering Blog"  # 홈페이지 최 상탄에 들어갈 타이틀
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
