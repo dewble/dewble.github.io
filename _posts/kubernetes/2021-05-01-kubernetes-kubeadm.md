@@ -17,12 +17,16 @@ toc_label: Contents
 popular: true
 ---
 # Purpose
+
 kubernetes 고가용성 클러스터 구성
 
 클러스터의 정합성을 유지하기 위해 최소 ControlPlane 노드 3개 이상의 홀수 개수가 권장 된다.
 
-### Kubeadm HA topology
-<center><img src="/assets/images/posts/kubernetes/kubeadm-ha-topology.svg" width="200%" height="200%"></center>
+### Kubeadm Ha topology
+
+<center><img src="/assets/images/posts/kubernetes/kubeadm-ha-topology.svg" width="150%" height="150%"></center>
+
+---
 
 # 공통
 
@@ -231,13 +235,15 @@ systemctl enable kubelet && systemctl start kubelet && systemctl status kubelet
 
 # Only Master nodes
 
+## 1. Allow root login When using ssh
+
 ```bash
 ## root 로그인 허용
 sed -i 's/PermitRootLogin no/PermitRootLogin yes/g' /etc/ssh/sshd_config
 systemctl restart sshd
 ```
 
-## Master node on all master
+## 2. Create ssh connection
 
 [asmanager@JN0182 .ssh]$ ssh-copy-id -i ~/.ssh/id_rsa.pub [asmanager@10.50.107.22](mailto:asmanager@10.50.107.22)
 
@@ -254,7 +260,7 @@ Last login: Fri Dec  4 11:16:11 2020
 root@AJTV006 [~]
 ```
 
-## 1. Kubeadm 구성 (단일 Master or HA)
+## 3. Kubeadm 구성 (단일 Master or HA)
 
 ```bash
 kubeadm init
@@ -305,7 +311,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config**
 
 ./kube/config 안에 key 가 있다.
 
-## Install Weave on master1
+## 4. Install Weave on master1
 
 ```bash
 kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
@@ -324,13 +330,13 @@ kubectl get nodes
 
 명령어를 확인해보면 STATUS 가 READY 가 된다.
 
-## Join with other master node
+## 5. Join with other master node
 
 ```bash
 kubeadm join 10.50.107.23:8443 --token 5yig3i.v60r5ecz56ufoucq     --discovery-token-ca-cert-hash sha256:790dbec7bba3afe9c6aec68b7dcc8dff700aa55c1fa4d390a55d23a8cc725349     --control-plane --certificate-key a27731afbc0c2dc206279921d7374e24f8999c6875e636548a9623dcf6945ca0
 ```
 
-## Join with other work node
+## 6. Join with other work node
 
 ```bash
 kubeadm join 10.50.107.23:8443 --token 5yig3i.v60r5ecz56ufoucq \
