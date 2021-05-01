@@ -1,5 +1,5 @@
 ---
-title: \[kubernetes\]\(kubeadm\) HA Configuration2-HAProxy
+title: \[kubernetes\]\(kubeadm\) HA Configuration3-Kubeadm
 layout: single
 author_profile: true
 read_time: true
@@ -9,7 +9,6 @@ related: true
 tag:
 - kubernetes
 - kubeadm
-- HAProxy
 categories:
 - kubernetes
 toc: true
