@@ -96,7 +96,7 @@ analytics:
 author:
   name             : "Jongmin Han"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Crossfit, Travel, Kubernetes, Devops, Linux, Jenkins, Zabbix, Wildfly, Golang, English "
+  bio              : "Crossfit, Travel, Kubernetes, Devops, Linux, Jenkins, Scouter, Zabbix, Wildfly, Golang, English "
   location         : "Republic of Korea"
   email            : "dewble62@gmail.com"
   links:
