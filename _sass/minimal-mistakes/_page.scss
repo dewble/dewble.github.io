@@ -556,4 +556,9 @@ body {
       padding-right: 0;
     }
   }
+
+  // utterances 댓글 너비 수정
+  .utterances {
+    max-width: 100% !important;
+  }
 }
