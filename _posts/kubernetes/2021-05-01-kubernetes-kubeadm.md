@@ -1,5 +1,5 @@
 ---
-title: \[kubernetes\]\(kubeadm\) HA Configuration3-Kubeadm
+title: \[Kubernetes\]\(Kubeadm\) HA Configuration3-Kubeadm
 layout: single
 author_profile: true
 read_time: true
@@ -7,17 +7,17 @@ comments: true
 share: true
 related: true
 tag:
-- kubernetes
-- kubeadm
+- Kubernetes
+- Kubeadm
+- Cluster
 categories:
-- kubernetes
+- Kubernetes
 toc: true
 toc_sticky: true
 toc_label: Contents
 popular: true
 ---
 # Purpose
-
 kubernetes 고가용성 클러스터 구성
 
 클러스터의 정합성을 유지하기 위해 최소 ControlPlane 노드 3개 이상의 홀수 개수가 권장 된다.

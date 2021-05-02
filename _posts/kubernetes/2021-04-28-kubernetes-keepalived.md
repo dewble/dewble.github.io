@@ -1,5 +1,5 @@
 ---
-title: \[kubernetes\]\(kubeadm\) HA Configuration1-keepalived
+title: \[Kubernetes\]\(Kubeadm\) HA Configuration1-keepalived
 layout: single
 author_profile: true
 read_time: true
@@ -7,11 +7,11 @@ comments: true
 share: true
 related: true
 tag:
-- kubernetes
-- kubeadm
-- keepalived
+- Kubernetes
+- Kubeadm
+- Keepalived
 categories:
-- kubernetes
+- Kubernetes
 toc: true
 toc_sticky: true
 toc_label: Contents

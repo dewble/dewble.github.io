@@ -1,5 +1,5 @@
 ---
-title: \[kubernetes\]\(kubeadm\) HA Configuration2-HAProxy
+title: \[Kubernetes\]\(Kubeadm\) HA Configuration2-HAProxy
 layout: single
 author_profile: true
 read_time: true
@@ -7,11 +7,11 @@ comments: true
 share: true
 related: true
 tag:
-- kubernetes
-- kubeadm
+- Kubernetes
+- Kubeadm
 - HAProxy
 categories:
-- kubernetes
+- Kubernetes
 toc: true
 toc_sticky: true
 toc_label: Contents
@@ -210,9 +210,9 @@ systemctl enable haproxy && systemctl restart haproxy && systemctl status haprox
 
 # HAproxy admin page
 <center><img src="/assets/images/posts/kubernetes/haproxy.png" width="150%" height="150%"></center>
-![HAProxy stats](/assets/images/posts/kubernetes/haproxy.png)
 HAProxy 에서 제공하는 stats 페이지에서 통신 상태를 확인할 수 있다.
 
+![HAProxy](/assets/images/posts/kubernetes/haproxy.png)
 
 
 # slave 서버에서 VIP 확인이 안될 경우
