@@ -6,10 +6,8 @@
   @include clearfix;
   margin-left: auto;
   margin-right: auto;
-
-// 주석처리
-  // padding-left: 1em;
-  // padding-right: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   max-width: 100%;
@@ -563,11 +561,4 @@ body {
   .utterances {
     max-width: 100% !important;
   }
-
-
-//  파일 제일 하단에 추가 
-.scrollbar__hide::-webkit-scrollbar {
-  display:none;  
-}
-
 }

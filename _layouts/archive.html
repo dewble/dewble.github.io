@@ -17,7 +17,8 @@ layout: default
 <div id="main" role="main">
   {% include sidebar.html %}
 
-  <div class="archive">
+<!-- style 태그 추가하여 padding 조절(좌우 25px 여백 추가) -->
+<div class="archive" style="padding: 0px 25px 0px 25px;">
     {% unless page.header.overlay_color or page.header.overlay_image %}
       <h1 id="page-title" class="page__title">{{ page.title }}</h1>
     {% endunless %}
