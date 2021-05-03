@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Kubeadm\) HA Configuration3-Kubeadm
+title: \[Kubernetes\]\(Kubeadm\)HA Configuration3-Kubeadm
 layout: single
 author_profile: true
 read_time: true

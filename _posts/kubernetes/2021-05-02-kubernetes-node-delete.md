@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Node\) Drain and Delete for node change
+title: \[Kubernetes\]\(Node\)Drain and Delete for node change
 layout: single
 author_profile: true
 read_time: true
