@@ -12,6 +12,7 @@
     /* fix z-index order of follow links */
     position: relative;
     z-index: 10;
+    padding: 0px 15px 0px 15px;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
