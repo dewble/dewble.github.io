@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Monitoring\)Install Metrics server for Kubernetes monitoring
+title: \[Kubernetes\]\(Monitoring\)Install WEB UI Dashboard
 layout: single
 author_profile: true
 read_time: true
@@ -9,7 +9,7 @@ related: true
 tag:
 - Kubernetes
 - Monitoring
-- Metrics
+- Dashboard
 categories:
 - Kubernetes
 toc: true
@@ -18,157 +18,219 @@ toc_label: Contents
 popular: true
 ---
 # Purpose
-kubernetes resource monitoring
+Monitoring kubernetes and controll kubernetes using WEB UI
 
-아래와 같이 클러스터 리소스를 확인하기 위해서는 metrics server가 우선적으로 설치되어야 한다.
+# Install WEB UI Dashboard
+
 ```bash
-## check resource 
-kubectl top node
-kubectl top pod
-
-root@jv0536 [~]kubectl top node
-NAME     CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%
-jv0535   132m         3%     3611Mi          46%
-jv0536   120m         3%     2744Mi          35%
-jv0537   121m         3%     2723Mi          35%
-jv0538   553m         13%    4009Mi          51%
-jv0539   125m         3%     3954Mi          51%
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml
 ```
 
----
-# Install metrics-server
+## pod 확인
 
 ```bash
-root@AJTV005 [~/workspace]git clone https://github.com/kubernetes-sigs/metrics-server.git
-```
-
-# Edit config
-
-## deployment
-
-### 1. edit args
-
-```bash
-root@AJTV005 [~/workspace/metrics-server/manifests/base]vim deployment.yaml
+root@AJTV005 [~]kubectl get pod -A
+NAMESPACE              NAME                                         READY   STATUS    RESTARTS   AGE
 ## 중략
 
-containers:
-      - name: metrics-server
-        image: gcr.io/k8s-staging-metrics-server/metrics-server:master
-        imagePullPolicy: IfNotPresent
-        args:
-          **- --cert-dir=/tmp
-          - --secure-port=4443
-          - --kubelet-insecure-tls
-          - --kubelet-preferred-address-types=InternalIP**
+kubernetes-dashboard   dashboard-metrics-scraper-7b59f7d4df-q9pl8   1/1     Running   0          3m27s
+kubernetes-dashboard   kubernetes-dashboard-74d688b6bc-zprkk        1/1     Running   0          3m28s
 ```
 
-### 2. edit deployment (add selector)
+## Check cluster info
 
 ```bash
-apiVersion: apps/v1
-kind: Deployment
+root@AJTV005 [~]kubectl cluster-info
+Kubernetes master is running at https://10.50.107.23:8443
+KubeDNS is running at https://10.50.107.23:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+```
+
+# Edit service ( you can change yaml as well )
+
+## change svc type to nodePort
+
+```bash
+root@AJTV005 [~/workspace]kubectl get svc -A
+NAMESPACE              NAME                        TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                  AGE
+# 중략
+kube-system            metrics-server              ClusterIP   10.104.203.75   <none>        443/TCP                  2d23h
+kubernetes-dashboard   dashboard-metrics-scraper   ClusterIP   10.104.59.152   <none>        8000/TCP                 6m43s
+kubernetes-dashboard   kubernetes-dashboard        ClusterIP   10.109.20.224   <none>        443/TCP                  6m44s
+```
+
+```bash
+root@AJTV005 [~/workspace]kubectl edit svc kubernetes-dashboard -n kubernetes-dashboard
+
+type: ClusterIP --> type: NodePort
+```
+
+## Check for svc type change
+
+```bash
+root@AJTV005 [~/workspace]kubectl get svc -A -o wide
+NAMESPACE              NAME                        TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                  AGE     SELECTOR
+default                kubernetes                  ClusterIP   10.96.0.1       <none>        443/TCP                  6d20h   <none>
+kube-system            kube-dns                    ClusterIP   10.96.0.10      <none>        53/UDP,53/TCP,9153/TCP   6d20h   k8s-app=kube-dns
+kube-system            metrics-server              ClusterIP   10.104.203.75   <none>        443/TCP                  3d      k8s-app=metrics-server
+kubernetes-dashboard   dashboard-metrics-scraper   ClusterIP   10.104.59.152   <none>        8000/TCP                 13m     k8s-app=dashboard-metrics-scraper
+kubernetes-dashboard   kubernetes-dashboard        NodePort    10.109.20.224   <none>        443:30225/TCP            13m     k8s-app=kubernetes-dashboard
+```
+
+## Use nodeport to https access on WEB UI dashboard
+
+```bash
+https://10.50.107.23:30225/#/login
+```
+
+# 3 Login methods
+
+1. Use kubeconfig 
+
+2. Use Token
+
+3. Login without any auth
+
+<center><img src="/assets/images/posts/kubernetes/web-ui-dashboard-login.png" width="150%" height="150%"></center>
+
+
+## 1. Use kubeconfig
+
+upload your kubeconfig file
+
+It is located in $HOME/.kube
+
+## 2. Use token
+
+### 2.1 Create svc account
+
+```bash
+cat << EOF > sa-admin-user.yaml
+apiVersion: v1
+kind: ServiceAccount
 metadata:
-  name: metrics-server
+  name: admin-user
   namespace: kube-system
-  **labels:
-    k8s-app: metric-server**
+EOF
+```
+
+### 2.2 Create ClusterRoleBinding
+
+```bash
+cat << EOF > rbac-admin-user.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: admin-user
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: admin-user
+  namespace: kube-system
+EOF
+```
+
+```bash
+root@AJTV005 [~/workspace/account]kubectl apply -f .
+clusterrolebinding.rbac.authorization.k8s.io/admin-user created
+serviceaccount/admin-user created
+```
+
+### 2.3 Get Token
+
+```bash
+cat << EOF > token-info
+kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user| awk '{print $1}')
+EOF
+```
+
+```bash
+root@AJTV005 [~/workspace/account]kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user| awk '{print $1}')
+Name:         admin-user-token-gjp22
+Namespace:    kube-system
+Labels:       <none>
+Annotations:  kubernetes.io/service-account.name: admin-user
+              kubernetes.io/service-account.uid: 2d318872-fcfa-4243-8945-7bd3297e2b96
+
+Type:  kubernetes.io/service-account-token
+
+Data
+====
+token:      eyJhbGciOiJSUzI1NiIsImtpZCI6IkhIMk1peHVUSDFZX0JydXZPaTFqdXBxcFJkLW03V09WZHpBUjVQTXZGVjgifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlLXN5c3RlbSIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJhZG1pbi11c2VyLXRva2VuLWdqcDIyIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImFkbWluLXVzZXIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiIyZDMxODg3Mi1mY2ZhLTQyNDMtODk0NS03YmQzMjk3ZTJiOTYiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6a3ViZS1zeXN0ZW06YWRtaW4tdXNlciJ9.p5MOK8ErB9SRw9rL8DYNbGp7Pt3AZes41Onuk8ZJZVkoHEihfNu3R6eh5feKCtX6aMDrDTSl8rb5nZ-3PpNt56DHkBjrjzn3sAJjrRMPCa6KVemscUWgGB3PbwODZAliI8IlpBcZFwOjyBzsuj-W2_7FN2g4LtW3PTNJE8rcRSpA5xAoLsZx9DJZlYc9S-b08yP5UWPpwvsZuZEfOxJGlvCBXdoCmx72NbAYoIIuB_-lD1mElSZpSMq4zgaiODqyiPoa-GOZjBznwH8PV8I9ZgMmsKyhtXhuvNYhDli8hbcNYxZ0N0K0Te_zFr0DvC1E90gaS1qjq1xz7OslAhUOEw
+ca.crt:     1066 bytes
+namespace:  11 bytes
+```
+
+## 3. Login without any auth
+
+### Chnage deployment spec.args
+
+```go
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  labels:
+    k8s-app: kubernetes-dashboard
+  name: kubernetes-dashboard
+  namespace: kube-system
 spec:
-  **selector:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
     matchLabels:
-      k8s-app: metric-server**
-  strategy:
-    rollingUpdate:
-      maxUnavailable: 0
+      k8s-app: kubernetes-dashboard
   template:
-    **metadata:
+    metadata:
       labels:
-        k8s-app: metric-server** 
-```
-
-```bash
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-commonLabels:
-  k8s-app: metrics-server
-resources:
-  - apiservice.yaml
-  - deployment.yaml
-  - rbac.yaml
-  - service.yaml
-```
-
-# commit
-
-```bash
-kubectl apply -k .
-```
+        k8s-app: kubernetes-dashboard
+    spec:
+      containers:
+      - name: kubernetes-dashboard
+        image: k8s.gcr.io/kubernetes-dashboard-amd64:v1.10.1
+        ports:
+        - containerPort: 9090 #2
+          protocol: TCP
+        args:
+        # - --auto-generate-certificates
+        - --enable-insecure-login #1 인증토큰 없이 로그인
+        - --insecure-bind-address=0.0.0.0 #2 http 접속 가능
+        - --insecure-port=9090 #2 http 접속 가능
+        - --enable-skip-login #1 인증토큰 없이 로그인
+        # Uncomment the following line to manually specify Kubernetes API server Host
+        # If not specified, Dashboard will attempt to auto discover the API server and connect
+        # to it. Uncomment only if the default does not work.
+        # - --apiserver-host=http://my-address:port
+        volumeMounts:
+        - name: kubernetes-dashboard-certs
+          mountPath: /certs
+          # Create on-disk volume to store exec logs
+        - mountPath: /tmp
+          name: tmp-volume
+        livenessProbe:
+          httpGet:
+            scheme: HTTP
+            path: /
+            port: 9090
+          initialDelaySeconds: 30
+          timeoutSeconds: 30
+      volumes:
+      - name: kubernetes-dashboard-certs
+        secret:
+          secretName: kubernetes-dashboard-certs
+      - name: tmp-volume
+        emptyDir: {}
+      serviceAccountName: kubernetes-dashboard
+      # Comment the following tolerations if Dashboard must not be deployed on master
+      tolerations:
+      - key: node-role.kubernetes.io/master
+        effect: NoSchedule
 
 ---
-
-# Use metrics-server API 
-
-## expose metrics-server
-
-```bash
-kubectl port-forward svc/metrics-server -n kube-system 30443:443
 ```
 
-## default 계정의 토큰 정보 얻기
-
-```bash
-$ TOKEN=$(kubectl describe secret $(kubectl get secrets | grep default | cut -f1 -d ' ') | grep -E '^token' | cut -f2 -d':' | tr -d ' ‘)
-```
-
-## 사용가능한 API 목록 확인
-
-```bash
-$ curl -k -H "Authorization: Bearer $TOKEN" https://localhost:30443/
-{
-  "paths": [
-    "/apis",
-    "/apis/metrics.k8s.io",
-    "/apis/metrics.k8s.io/v1beta1",
-    "/healthz",
-    "/healthz/healthz",
-    "/healthz/ping",
-    "/healthz/poststarthook/generic-apiserver-start-informers",
-    "/metrics",
-    "/openapi/v2",
-    "/swagger-2.0.0.json",
-    "/swagger-2.0.0.pb-v1",
-    "/swagger-2.0.0.pb-v1.gz",
-    "/swagger.json",
-    "/swaggerapi",
-    "/version"
-  ]
-}%
-```
-
-## metric 정보 확인 (/metrics)
-
-```bash
-curl -k -H "Authorization: Bearer $TOKEN" https://localhost:30443/metrics
-……
-# TYPE metrics_server_scraper_last_time_seconds gauge
-metrics_server_scraper_last_time_seconds{source="kubelet_summary:docker-for-desktop"} 1.535815717e+09
-# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
-# TYPE process_cpu_seconds_total counter
-process_cpu_seconds_total 8.92
-# HELP process_max_fds Maximum number of open file descriptors.
-# TYPE process_max_fds gauge
-process_max_fds 1.048576e+06
-# HELP process_open_fds Number of open file descriptors.
-# TYPE process_open_fds gauge
-process_open_fds 11
-# HELP process_resident_memory_bytes Resident memory size in bytes.
-# TYPE process_resident_memory_bytes gauge
-process_resident_memory_bytes 2.2048768e+07
-# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
-# TYPE process_start_time_seconds gauge
-process_start_time_seconds 1.53580689462e+09
-# HELP process_virtual_memory_bytes Virtual memory size in bytes.
-# TYPE process_virtual_memory_bytes gauge
-process_virtual_memory_bytes 4.9332224e+07
-
-```
+# Use WEB UI dashboard
+<center><img src="/assets/images/posts/kubernetes/web-ui-dashboard-example.png" width="150%" height="150%"></center>
