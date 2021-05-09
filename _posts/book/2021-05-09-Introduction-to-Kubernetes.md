@@ -19,7 +19,7 @@ popular: true
 ---
 # Book information
 책: [쿠버네티스 입문](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791157685752&orderClick=LEa&Kc=)  
-내용: 90가지 예제로 배우는 컨테이너 관리 자동화 표준
+내용: 90가지 예제로 배우는 컨테이너 관리 자동화 표준  
 저자: 정원천, 공용준, 홍석용, 정경록  
 출판사: 동양북스  
   
