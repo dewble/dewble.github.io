@@ -17,7 +17,7 @@ toc_sticky: true
 toc_label: Contents
 popular: true
 ---
-# 책 정보
+# Book information
 책: [코드로 배우는 스프링 웹 프로젝트](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791189184018&orderClick=LIZ&Kc=)  
 내용: Spring Framework를 이용한 웹 사이트 개발   
 저자: 구멍가게 코딩단  
