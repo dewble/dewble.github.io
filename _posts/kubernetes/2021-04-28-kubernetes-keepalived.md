@@ -54,7 +54,7 @@ vrrp_instance VI_1 {
     advert_int 1                # VRRP패킷 송신 간경 설정 (seconds)
     authentication {
         auth_type PASS          # 평문 인증 설정
-        auth_pass joins         # 인증을 위한 키 (Master Node 모두 같은 값)
+        auth_pass join         # 인증을 위한 키 (Master Node 모두 같은 값)
     }
     virtual_ipaddress {
        10.50.103.133             # VIP 설정
@@ -81,7 +81,7 @@ vrrp_instance VI_1 {
     advert_int 1
     authentication {
         auth_type PASS
-        auth_pass joins
+        auth_pass join
     }
     virtual_ipaddress {
         10.50.107.23
@@ -106,7 +106,7 @@ vrrp_instance VI_1 {
     advert_int 1
     authentication {
         auth_type PASS
-        auth_pass joins
+        auth_pass join
     }
     virtual_ipaddress {
         10.50.107.23

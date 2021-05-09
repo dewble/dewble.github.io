@@ -31,7 +31,6 @@ root@AJTV005 [/etc/haproxy]cp haproxy.cfg haproxy.cfg.bak
 ```
 
 ## config example1
-
 ```bash
 #---------------------------------------------------------------------
 # Global settings
@@ -87,7 +86,7 @@ defaults
     maxconn                 10000
 
 #---------------------------------------------------------------------
-#joins164
+# mail server
 mailers mta
         mailer smtp1 192.168.2.151:25
 
@@ -97,13 +96,13 @@ listen elk_192.168.171.159_9200
         bind 192.168.171.159:9200
         maxconn 8000
         balance roundrobin
-        server elk_1_JTBCV083 192.168.171.155:9200 check inter 2s fall 3 rise 2
-        server elk_2_JTBCV084 192.168.171.156:9200 check inter 2s fall 3 rise 2
-        server elk_3_JTBCV089 192.168.171.157:9200 check inter 2s fall 3 rise 2
+        server elk_1 192.168.171.155:9200 check inter 2s fall 3 rise 2
+        server elk_2 192.168.171.156:9200 check inter 2s fall 3 rise 2
+        server elk_3 192.168.171.157:9200 check inter 2s fall 3 rise 2
         email-alert mailers mta
         email-alert level notice
-        email-alert from lvs@joongang.co.kr
-        email-alert to kim.hyoungju@joins.com
+        email-alert from mail@mail.com
+        email-alert to mail@mail.com
 
 listen stats
         mode http
@@ -112,7 +111,7 @@ listen stats
         stats enable
         stats hide-version
         stats uri /stats
-        stats auth hadmin:hadmin199
+        stats auth admin:admin199
 #---------------------------------------------------------------------
 ```
 
@@ -178,13 +177,9 @@ listen K8s_10.50.103.133_8443
         bind 10.50.103.133:8443
         maxconn 8000
         balance roundrobin
-        server jv0535 10.50.103.134:6443 check inter 2s fall 3 rise 2
-        server jv0536 10.50.103.135:6443 check inter 2s fall 3 rise 2
-        server jv0537 10.50.103.136:6443 check inter 2s fall 3 rise 2
-        #email-alert mailers mta
-        #email-alert level notice
-        #email-alert from lvs@joongang.co.kr
-        #email-alert to kim.hyoungju@joins.com
+        server CP1 10.50.103.134:6443 check inter 2s fall 3 rise 2
+        server CP2 10.50.103.135:6443 check inter 2s fall 3 rise 2
+        server CP3 10.50.103.136:6443 check inter 2s fall 3 rise 2
 
 ## admin page
 listen stats
