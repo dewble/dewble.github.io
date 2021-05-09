@@ -185,7 +185,7 @@ root@jv0535 [~/workspace/yaml/prometheus/prometheus-operator]grep -i '^\ *nodese
     nodeSelector: {}
 ```
 
-# 6. Chart Deploy
+# 5. Chart Deploy
 
 ```bash
 root@jv0535 [~/workspace/yaml/prometheus-operator]helm install prometheus . -n prometheus
