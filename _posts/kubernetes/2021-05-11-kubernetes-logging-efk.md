@@ -108,7 +108,7 @@ elasticsearch:
   host: 'elasticsearch-master'
 ```
 
-## mount 경로 지정 ( HostPath )
+## Specify mount path ( HostPath )
 
 Edit templates/daemonset.yaml
 
