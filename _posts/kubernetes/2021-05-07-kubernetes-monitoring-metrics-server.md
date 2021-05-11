@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Monitoring\)Install Metrics server for Kubernetes monitoring
+title: \[Kubernetes\]\(Monitoring\)Install Metrics server for kubernetes monitoring
 layout: single
 author_profile: true
 read_time: true

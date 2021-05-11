@@ -127,7 +127,7 @@ storage:
              storage: 10Gi
 ```
 
-## 3.2 Create pv ( using NFS )
+## 3.2 Create pv ( using hostPath )
 
 the path below needs appropriate authorit
 
@@ -135,33 +135,59 @@ the path below needs appropriate authorit
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: pv-for-alertmanager
+  name: prometheus-alertmanager
 spec:
   capacity:
-    storage: 10Gi
+    storage: 20Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  nfs:
-    path: /k8s-dev/alertmanage
-    server: 10.50.20.40
+  hostPath: # 내용에 맞게 변경
+    path: /k8s-nas/prometheus/alertmanager
 ---
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: pv-for-grafana
+  name: prometheus-grafana
 spec:
   capacity:
-    storage: 10Gi
+    storage: 15Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  nfs:
-    path: /k8s-dev/grafana
-    server: 10.50.20.40
+  hostPath: # 내용에 맞게 변경
+    path: /k8s-nas/prometheus/grafana
 ```
+
+### Edit value.yaml
+
+Mapping volumeName to pv name
+
+```bash
+storage: #{}
+     volumeClaimTemplate:
+       spec:
+         #storageClassName: gluster
+         accessModes: ["ReadWriteOnce"]
+         resources:
+           requests:
+             storage: 20Gi
+         volumeName: prometheus-alertmanager
+
+---
+storageSpec: #{}
+      volumeClaimTemplate:
+        spec:
+    #      storageClassName: gluster
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 15Gi
+          volumeName: prometheus-grafana
+```
+
 
 # 4. Add label ( options )
 
