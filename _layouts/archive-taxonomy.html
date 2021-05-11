@@ -4,27 +4,26 @@ author_profile: false
 ---
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
+{% include page__hero.html %}
 {% elsif page.header.video.id and page.header.video.provider %}
-  {% include page__hero_video.html %}
+{% include page__hero_video.html %}
 {% endif %}
 
 {% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
+{% unless paginator %}
+{% include breadcrumbs.html %}
+{% endunless %}
 {% endif %}
 
 <div id="main" role="main">
   {% include sidebar.html %}
-
   <!-- style 태그 추가하여 padding 조절(좌우 25px 여백 추가) -->
   <div class="archive" style="padding: 0px 25px 0px 25px;">
     {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 id="page-title" class="page__title">{{ page.title }}</h1>
+    <h1 id="page-title" class="page__title">{{ page.title }}</h1>
     {% endunless %}
     {% for post in page.posts %}
-      {% include archive-single.html %}
+    {% include archive-single.html %}
     {% endfor %}
   </div>
 </div>
