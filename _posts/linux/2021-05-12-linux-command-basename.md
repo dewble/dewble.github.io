@@ -17,10 +17,11 @@ toc_sticky: true
 toc_label: Contents
 popular: true
 ---
-# Purpose
+# **Purpose**
 Print NAME with any leading directory components removed.  If specified, also remove a trailing SUFFIX.
 
 # suffix
+
 remove a trailing suffix
 
 option: -s
@@ -39,22 +40,18 @@ root@jv0540 [/data/gitlab/backups]basename -s "_gitlab_backup.tar" /data/gitlab/
 1620209195_2021_05_05_13.2.0
 
 ```
-0 0 * * * (find /box/log/*/*.log.* -mtime +7 -exec rm -rf {} \;)
-30 0 * * * (find /box/log/*/*.log.* ! -name '*.gz' -mtime +1 -exec gzip {} \;)
-```
 
-### 매일 4시, 14일 지난 로그 삭제 (script 실행)
+# multiple
 
-```bash
-00 04 * * * /root/scheduled_job/log_delete.sh
-```
-
-log_delete.sh
+options: -a
 
 ```bash
-#!/bin/sh
+root@jv0540 [~/scripts]basename -a ~/scripts/*.txt
+test1.txt
+test2.txt
+test3.txt
 
-LOG=/box/java_logs
-
-find $LOG -type f -mtime +14 |xargs rm -f
+root@jv0540 [~/scripts]basename -a ~/scripts/test1.txt ~/scripts/test2.txt
+test1.txt
+test2.txt
 ```
