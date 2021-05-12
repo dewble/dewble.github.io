@@ -1,5 +1,5 @@
 ---
-title: \[Linux\]\(Command\)SCP — secure copy (remote file copy program)
+title: \[Linux\]\(Command\)basename - strip directory and suffix from filenames
 layout: single
 author_profile: true
 read_time: true
@@ -18,39 +18,27 @@ toc_label: Contents
 popular: true
 ---
 # Purpose
-Transfer files or diractory
+Print NAME with any leading directory components removed.  If specified, also remove a trailing SUFFIX.
 
----
-# Find and Delete old log files
+# suffix
+remove a trailing suffix
 
-## 1. 몇일 전
+option: -s
 
 ```bash
-# 사용법 1
-find -name '/경로/*.log' -mtime +(원하는날짜 -1) |xargs rm
+# without -s 
+root@jv0540 [/data/gitlab/backups]basename /data/gitlab/backups/1620209195_2021_05_05_13.2.0_gitlab_backup.tar
+1620209195_2021_05_05_13.2.0_gitlab_backup.tar
 
-# 사용법 2
-find /home/searchuser/sf-1/log/*/*.log -type f -mtime +30 | xargs rm -f
-find /home/searchuser/sf-1/log/*/*.log -type f -mtime +30 -exec rm -f {} \;
+# with -s
+root@jv0540 [/data/gitlab/backups]basename -s "_gitlab_backup.tar" /data/gitlab/backups/1620209195_2021_05_05_13.2.0_gitlab_backup.tar
+1620209195_2021_05_05_13.2.0
+
+root@jv0540 [/data/gitlab/backups]basename -s "_gitlab_backup.tar" /data/gitlab/backups/*gitlab_backup.tar
+1620209195_2021_05_03_13.2.0
+1620209195_2021_05_05_13.2.0
+
 ```
-
-현재 위치 하위에서 .log 파일을 찾아서 mtime(수정시간)이 30일 이상 된 것을 지움(xargs rm)
-
-## 2. 특정 월
-
-```bash
-## 대상 파일 확인
-ll --time-style full-iso | awk '{print $6" "$9}' | grep 2021-04
-
-## 대상 파일 삭제
-ll --time-style full-iso | awk '{print $6" "$9}' | grep 2021-04 | awk '{print $2}' | xargs rm -f
-```
-
-## 3. script를 crontab 에 등록하여 삭제
-
-### /box/log 밑에 있는 로그를 1주일 간격으로 삭제
-
-```bash
 0 0 * * * (find /box/log/*/*.log.* -mtime +7 -exec rm -rf {} \;)
 30 0 * * * (find /box/log/*/*.log.* ! -name '*.gz' -mtime +1 -exec gzip {} \;)
 ```
