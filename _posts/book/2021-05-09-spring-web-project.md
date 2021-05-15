@@ -22,7 +22,9 @@ popular: true
 내용: Spring Framework를 이용한 웹 사이트 개발   
 저자: 구멍가게 코딩단  
 출판사: 남가람북스  
-  
+<img src="/assets/images/posts/book/spring-web-project.jpg" width="50%" height="50%">
+
+
 # Rate
 별점:⭐⭐⭐⭐  
 내용이 상세히 나와 있어 풍부한 정보를 제공하지만 처음 책을 보고 따라하는 입장에서 내용이 어렵게 느껴지고 양이 많았다.
