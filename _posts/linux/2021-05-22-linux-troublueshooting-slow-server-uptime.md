@@ -1,5 +1,5 @@
 ---
-title: \[Linux\]\(Troubleshooting\)Slow servers - 1. Check load average
+title: \[Linux\]\(Troubleshooting\)Slow servers - 1. Check load average with "uptime" command
 layout: single
 author_profile: true
 read_time: true
@@ -33,7 +33,7 @@ Check load average 1, 5, 15 minutes. It will be fundamental data to resolve prob
 - 실행 가능한 프로세스: 현재 CPU를 사용하고 있거나 CPU 사용을 위해 대기 중인 상태
 - 중단 불가능한 프로세스: I/O를 기다리고 있는 프로세스.
 
-### Example
+## Example
 1) 단일 CPU 환경의 시스템에서 평균 부하 1
    -  한 개의 CPU가 끊임없이 일을 하고 있었다는 뜻이다.
 
