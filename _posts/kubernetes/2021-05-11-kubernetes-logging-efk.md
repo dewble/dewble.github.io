@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Monitoring\)Install EFK for kubernetes logging
+title: \[Kubernetes\]\(Logging\)Install EFK for kubernetes logging
 layout: single
 author_profile: true
 read_time: true
@@ -161,7 +161,7 @@ helm install kibana . -n efk
 
 Stack Management → Index Patterns 
 
-<center><img src="/assets/images/posts/kubernetes/efk-define-index.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/kubernetes/logging-efk-define-index.png" width="150%" height="150%"></center>
 ```bash
 logstash-*
 ```
@@ -170,6 +170,6 @@ logstash-*
 
 Analytics → Discover
 
-<center><img src="/assets/images/posts/kubernetes/efk-discover.png" width="40%" height="40%"></center>  
+<center><img src="/assets/images/posts/kubernetes/logging-efk-discover.png" width="40%" height="40%"></center>  
 
-<center><img src="/assets/images/posts/kubernetes/efk-discover2.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/kubernetes/logging-efk-discover2.png" width="150%" height="150%"></center>

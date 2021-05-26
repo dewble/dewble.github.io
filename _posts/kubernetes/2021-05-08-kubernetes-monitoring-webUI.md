@@ -92,7 +92,7 @@ https://10.50.107.23:30225/#/login
 
 3. Login without any auth
 
-<center><img src="/assets/images/posts/kubernetes/web-ui-dashboard-login.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/kubernetes/monitoring-web-ui-dashboard-login.png" width="150%" height="150%"></center>
 
 
 ## 1. Use kubeconfig
@@ -233,4 +233,4 @@ spec:
 ```
 
 # Use WEB UI dashboard
-<center><img src="/assets/images/posts/kubernetes/web-ui-dashboard-example.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/kubernetes/monitoring-web-ui-dashboard-example.png" width="150%" height="150%"></center>

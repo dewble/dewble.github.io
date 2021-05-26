@@ -204,7 +204,7 @@ systemctl enable haproxy && systemctl restart haproxy && systemctl status haprox
 ```
 
 # HAproxy admin page
-<center><img src="/assets/images/posts/kubernetes/haproxy.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/kubernetes/kubeadm-haproxy.png" width="150%" height="150%"></center>
 HAProxy 에서 제공하는 stats 페이지에서 통신 상태를 확인할 수 있다.
 
 
