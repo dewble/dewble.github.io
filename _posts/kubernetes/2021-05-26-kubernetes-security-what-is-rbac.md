@@ -18,7 +18,6 @@ toc_label: Contents
 popular: true
 ---
 # Purpose
-
 When lots of users use a cluster, we can seperate access rights with namespace or API.
 
 클러스터 하나를 여러 명이 사용할 때는 API나 네임스페이스별로 권한을 구분해서 권한이 있는곳에만 접근하도록 만들 수 있다.

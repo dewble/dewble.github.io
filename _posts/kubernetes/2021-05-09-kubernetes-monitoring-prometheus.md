@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Monitoring\)Install prometheus
+title: \[Kubernetes\]\(Monitoring\)Install prometheus for kubernetes monitoring
 layout: single
 author_profile: true
 read_time: true
@@ -24,7 +24,7 @@ Monitor and alert kubernetes cluster
 # Prometheus architecture
 
 [Overview | Prometheus](https://prometheus.io/docs/introduction/overview/#architecture)
-<center><img src="/assets/images/posts/kubernetes/prometheus.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/kubernetes/monitoring-prometheus.png" width="150%" height="150%"></center>
 
 
 ### Prometheus server
