@@ -49,7 +49,7 @@ cpu core 별 사용률
 
 <center><img src="/assets/images/posts/linux/troubleshooting-top/top-5.png" width="150%" height="150%"></center>
 
-### Shift + f :
+### Shift + f
 
 화면에 표시된 목록 리스트를 선정하여 원하는 출력을 얻을 수 있다.
 
