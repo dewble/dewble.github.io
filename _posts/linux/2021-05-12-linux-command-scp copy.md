@@ -9,7 +9,7 @@ related: true
 tag:
 - Linux
 - Command
-- SCP
+- scp
 categories:
 - Linux
 toc: true
