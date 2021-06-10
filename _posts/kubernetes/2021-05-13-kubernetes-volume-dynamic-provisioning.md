@@ -20,7 +20,7 @@ popular: true
 ---
 # Purpose
 PVC를 생성할 때 PV 가 자동으로 생성되는 Dynamic Provisioning 을 NFS 기반으로 운영
-<center><img src="/assets/images/posts/kubernetes/volume-dynamic-pvc.png" width="150%" height="150%" ></center>  
+<center><img src="/assets/images/posts/kubernetes/volume/volume-dynamic-pvc.png" width="150%" height="150%" ></center>  
 
 
 
