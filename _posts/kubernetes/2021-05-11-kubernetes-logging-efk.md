@@ -22,6 +22,7 @@ popular: true
 # Purpose
 kubernetes logging
 
+---
 # 1. Install elasticsearch
 
 ```bash
@@ -92,6 +93,8 @@ root@jv0535 [~/workspace/yaml/efk/elasticsearch]curl 10.111.12.152:9200
 }
 ```
 
+
+---
 # 2. Install Fluentd
 
 
@@ -131,6 +134,7 @@ volumeMounts:
 [tail usage link: docs.fluentd.org](https://docs.fluentd.org/input/tail)
 
 
+---
 # 3. Install Kibana
 
 ```bash
@@ -155,21 +159,27 @@ ingress:
 helm install kibana . -n efk
 ```
 
+---
 # 4. Using EFK
 
 ## Define index pattern
 
 Stack Management → Index Patterns 
 
-<center><img src="/assets/images/posts/kubernetes/logging-efk-define-index.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/kubernetes/logging/logging-efk-define-index.png" width="150%" height="150%"></center>
 ```bash
 logstash-*
 ```
 
-## Search log
+## Use Discover
 
 Analytics → Discover
 
-<center><img src="/assets/images/posts/kubernetes/logging-efk-discover.png" width="40%" height="40%"></center>  
+<center><img src="/assets/images/posts/kubernetes/logging/logging-efk-discover.png" width="40%" height="40%"></center>  
 
-<center><img src="/assets/images/posts/kubernetes/logging-efk-discover2.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/kubernetes/logging/logging-efk-discover2.png" width="150%" height="150%"></center>
+
+## Use Logs
+
+<center><img src="/assets/images/posts/kubernetes/logging/logging-efk-use-logs.png
+" width="150%" height="150%"></center>

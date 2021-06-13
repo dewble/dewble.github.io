@@ -34,10 +34,12 @@ A request for storage by a user. It is similar to a Pod.
 ## PV, PVC, Pod template
 <center><img src="/assets/images/posts/kubernetes/volume/volume-pv-pvc1.png" width="150%" height="150%" ></center>  
 
+---
 # PV  (PersistentVolume)
 
 볼륨 자체. 클러스터 안에서 자원으로 다룬다. 파드하고는 별개로 관리되고 별도의 생명 주기가 있다.
 
+---
 # PVC (PersistentVolumeClaim)
 
 사용자가 PV에 하는 요청. 사용하고 싶은 용량은 얼마인지, 읽기/쓰기는 어떤 모드로 설정하고 싶은지 등을 정해서 요청한다.

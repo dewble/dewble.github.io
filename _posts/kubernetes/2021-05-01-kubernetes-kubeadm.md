@@ -24,10 +24,9 @@ kubernetes 고가용성 클러스터 구성
 
 ### Kubeadm Ha topology
 
-<center><img src="/assets/images/posts/kubernetes/kubeadm-ha-topology.svg" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/kubernetes/kubeadm/kubeadm-ha-topology.svg" width="150%" height="150%"></center>
 
 ---
-
 # 공통
 
 ### vim /etc/hosts
@@ -232,7 +231,6 @@ systemctl enable kubelet && systemctl start kubelet && systemctl status kubelet
 ```
 
 ---
-
 # Only Master nodes
 
 ## 1. Allow root login When using ssh

@@ -20,7 +20,7 @@ popular: true
 # Purpose
 Create VIP for HA configuration  
 
-
+---
 # What is keepalived ?
 :VRRP 기능을 이용하는 서버 다중화 도구
 
@@ -30,6 +30,7 @@ Create VIP for HA configuration
 마스터 서버가 다운되면 백업 서버 중 가장 우선순위 값이 높은 서버가 마스터로 전환 된다.  
 마스터 서버가 되살아나면 다시 마스터 역할을 돌려 받게된다.
 
+---
 # Install Keepalived on all master node
 
 ```bash

@@ -20,6 +20,7 @@ popular: true
 # Purpose
 Install helm that set resources about kubernetes
 
+---
 # Install helm
 ```bash
 root@ajtv005 [~/workspace/helm]curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
@@ -34,6 +35,7 @@ root@ajtv005 [~/workspace/helm]helm version
 version.BuildInfo{Version:"v3.4.2", GitCommit:"23dd3af5e19a02d4f4baa5b2f242645a1a3af629", GitTreeState:"clean", GoVersion:"go1.14.13"}
 ```
 
+---
 # Add helm stable repo
 
 ```bash
@@ -44,6 +46,7 @@ root@ajtv005 [~/workspace/helm]helm repo add stable https://charts.helm.sh/stabl
 helm repo add argo https://argoproj.github.io/argo-helm
 ```
 
+---
 # Search helm list
 
 ## With repo
@@ -58,6 +61,7 @@ root@ajtv005 [~/workspace/helm]helm search repo stable
 root@ajtv005 [~/workspace/helm]helm search hub stable
 ```
 
+---
 # Helm repo update
 
 ```bash

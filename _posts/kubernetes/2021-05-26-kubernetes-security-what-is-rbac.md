@@ -39,7 +39,7 @@ method of regulating access to computer or network resources based on the roles 
 # RBAC architecture in kubernetes
 
 
-<center><img src="/assets/images/posts/kubernetes/security-what-is-rbac.png" width="150%" height="150%" ></center>  
+<center><img src="/assets/images/posts/kubernetes/security/security-what-is-rbac.png" width="150%" height="150%" ></center>  
 
 ---
 

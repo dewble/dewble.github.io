@@ -20,6 +20,7 @@ popular: true
 # Purpose
 To understand How to use helm chart
 
+---
 # Helm chart directory structure
 ```bash
 wordpress/
@@ -35,12 +36,14 @@ wordpress/
   templates/NOTES.txt # OPTIONAL: A plain text file containing short usage notes
 ```
 
+---
 # Find helm chart - helm search
 
 ```bash
 helm search repo/hub [chartname]
 ```
 
+---
 # Download and install helm chart - helm fetch and install
 
 **Before install helm chart, you can change values.yaml file what you want**
@@ -61,6 +64,7 @@ helm uninstall [helmchart] -n [namespace]
 2. helm install prometheus-operator
 ```
 
+---
 # Helm upgrade - After edit value.yaml
 
 ```bash
@@ -72,6 +76,7 @@ REVISION        UPDATED                         STATUS          CHART           
 2               Fri Apr  2 13:24:14 2021        deployed        prometheus-operator-9.3.2       0.38.1          Upgrade complete
 ```
 
+---
 # Do not remove resource such as pvc
 
 ```go

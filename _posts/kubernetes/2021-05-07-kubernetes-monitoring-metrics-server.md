@@ -42,6 +42,7 @@ jv0539   125m         3%     3954Mi          51%
 root@AJTV005 [~/workspace]git clone https://github.com/kubernetes-sigs/metrics-server.git
 ```
 
+---
 # Edit config
 
 ## deployment
@@ -98,6 +99,8 @@ resources:
   - service.yaml
 ```
 
+
+---
 # commit
 
 ```bash

@@ -23,13 +23,14 @@ popular: true
 저자: 정원천, 공용준, 홍석용, 정경록  
 출판사: 동양북스  
 <img src="/assets/images/posts/book/start-kubernetes.jpg" width="50%" height="50%">
- 
+
+---
 # Rate
 별점:⭐⭐⭐⭐⭐  
 Kubernetes 운영에 꼭 필요한 내용들이 담겨있는 책.  
 만약 Kubernetes 공부를 시작하는 상황이라면 이 책으로 시작해보는 것을 추천한다.  
 
-
+---
 # Review
 기존 Docker Swarm으로 구축된 컨테이너 클러스터를 고도화하기 위해 Kubernetes로 전환하기로 하였다.  
 

@@ -21,10 +21,11 @@ popular: true
 # Purpose
 Monitor and alert kubernetes cluster
 
+---
 # Prometheus architecture
 
 [Overview | Prometheus](https://prometheus.io/docs/introduction/overview/#architecture)
-<center><img src="/assets/images/posts/kubernetes/monitoring-prometheus.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/kubernetes/monitoring/monitoring-prometheus.png" width="150%" height="150%"></center>
 
 
 ### Prometheus server
@@ -52,6 +53,8 @@ Monitor and alert kubernetes cluster
 
 [Helm chart를 활용한 Prometheus & Grafana Kubernetes에 구성하기](https://waspro.tistory.com/588)
 
+
+---
 # 1. Chart Download
 
 There are 2 ways to install helm chart
@@ -64,6 +67,8 @@ cd charts/stable
 helm fetch stable/prometheus-operator
 ```
 
+
+---
 # 2. compile chart
 
 ```bash
@@ -93,6 +98,7 @@ mkdir: created directory ‘./prometheus-operator/charts’
 root@jv0535 [~/workspace/charts/stable]mv *.tgz ./prometheus-operator/charts/
 ```
 
+---
 # 3. Config Volume
 
 There are 2 ways to use volume
@@ -188,7 +194,7 @@ storageSpec: #{}
           volumeName: prometheus-grafana
 ```
 
-
+---
 # 4. Add label ( options )
 
 when you want to use specifc node, add node label and edit below value
@@ -211,6 +217,7 @@ root@jv0535 [~/workspace/yaml/prometheus/prometheus-operator]grep -i '^\ *nodese
     nodeSelector: {}
 ```
 
+---
 # 5. Chart Deploy
 
 ```bash

@@ -24,12 +24,12 @@ popular: true
 출판사: 남가람북스  
 <img src="/assets/images/posts/book/spring-web-project.jpg" width="50%" height="50%">
 
-
+---
 # Rate
 별점:⭐⭐⭐⭐  
 내용이 상세히 나와 있어 풍부한 정보를 제공하지만 처음 책을 보고 따라하는 입장에서 내용이 어렵게 느껴지고 양이 많았다.
 
-
+---
 # Review
 인프라 자원 관리를 위한 사이트 개발을 위해 참고 서적으로 구매하였다.
 

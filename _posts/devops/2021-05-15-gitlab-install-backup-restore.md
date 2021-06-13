@@ -20,7 +20,7 @@ popular: true
 # Purpose
 Install, backup, restore Gitlab CI/CD  
 
-
+---
 # 1. Install gitlab
 
 Gitlab version: 13.2.0
@@ -44,6 +44,7 @@ The version can be checked with command below
 yum --showduplicates list gitlab-ce 
 ```    
 
+---
 # 2. Backup
 
 ## set backup config
@@ -64,6 +65,7 @@ gitlab_rails['backup_path'] = "/data/gitlab/backups"
 gitlab-rake gitlab:backup:create
 ```  
 
+---
 # 3. restore
 ## File transfer
 

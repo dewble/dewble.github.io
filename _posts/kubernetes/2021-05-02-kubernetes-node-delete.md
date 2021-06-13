@@ -20,6 +20,7 @@ popular: true
 # Purpose
 서버의 물리적인 자원교체, 버전 업그레이드를 위해 클러스터에서 노드를 제외시키기 위함.
 
+---
 # 1. Node drain & delete
 
 ```bash
@@ -51,6 +52,7 @@ ajtv007   Ready    <none>   22h   v1.19.4   10.50.107.24   <none>        CentOS 
 ajtv008   Ready    <none>   22h   v1.19.4   10.50.107.25   <none>        CentOS Linux 7 (Core)   3.10.0-1160.6.1.el7.x86_64   docker://19.3.14
 ```
 
+---
 # 2. kubeadm reset (삭제한 노드에서)
 
 ```bash
@@ -60,6 +62,7 @@ rm -rf /etc/cni/net.d
 rm -rf $HOME/.kube/config
 ```
 
+---
 # 3. Get token, certs and hash key
 
 ## 3.1 Create token
@@ -116,6 +119,7 @@ W1209 00:57:53.829050    8487 configset.go:348] WARNING: kubeadm cannot validate
 12d076d4733416c12c491ac54f929d43b4b0f721b044d0202b291d20f1656b96
 ```
 
+---
 # 4. Join with token
 
 ## For Master
@@ -138,6 +142,7 @@ kubeadm join 10.50.107.23:8443 --token hbqmn6.4bu4lp8ik046qy78 \
 kubeadm join 10.50.107.23:8443 --token uljmut.h6sy5ibklt0d9vuh     --discovery-token-ca-cert-hash sha256:0f63b526211dacb46d50157ce99b53d6bfdc7246551e39baa7b47e396f97542a
 ```
 
+---
 # Troubleshooting
 
 ## Remove master node from a HA Cluster and also from cluster
