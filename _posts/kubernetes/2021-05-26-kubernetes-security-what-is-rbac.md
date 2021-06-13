@@ -10,6 +10,7 @@ tag:
 - Kubernetes
 - Security
 - Helm
+- Whatis
 categories:
 - Kubernetes
 toc: true

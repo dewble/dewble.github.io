@@ -58,7 +58,7 @@ mapping volumeName to pv name
 
 ```bash
 volumeClaimTemplate:
-  #storageClassName: joins-nfs-storageclass
+  #storageClassName: join-nfs-storageclass
   accessModes: [ "ReadWriteOnce" ]
   resources:
     requests:
