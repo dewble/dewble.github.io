@@ -19,7 +19,6 @@ toc_label: Contents
 popular: true
 ---
 # Purpose
-
 Collect, report, or save system activity information.
 
 현상 확인 후 과부하 문제 해결하기
