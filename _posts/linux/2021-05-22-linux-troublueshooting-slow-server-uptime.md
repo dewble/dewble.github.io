@@ -10,6 +10,7 @@ tag:
 - Linux
 - Troubleshooting
 - Slow servers
+- uptime
 categories:
 - Linux
 toc: true
