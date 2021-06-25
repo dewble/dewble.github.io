@@ -62,7 +62,7 @@ metadata:
   name: join-harbor
   namespace: springboot
   resourceVersion: "13800590"
-  selfLink: /api/v1/namespaces/springboot/secrets/joins-harbor
+  selfLink: /api/v1/namespaces/springboot/secrets/join-harbor
   uid: 1c2aa797-814d-4bc9-99c3-c9f60b18a605
 type: kubernetes.io/dockerconfigjson
 ```
