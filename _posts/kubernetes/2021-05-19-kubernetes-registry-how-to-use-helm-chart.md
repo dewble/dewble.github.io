@@ -10,7 +10,7 @@ tag:
 - Kubernetes
 - Registry
 - Helm
-- Howto
+- How-to
 categories:
 - Kubernetes
 toc: true

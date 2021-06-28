@@ -1,5 +1,5 @@
 ---
-title: \[Scouter\]\(Install\)Install scouter collector, client
+title: \[Scouter\]\(Install\)Install scouter collector and client
 layout: single
 author_profile: true
 read_time: true
@@ -10,6 +10,7 @@ tag:
 - Scouter
 - Install
 - Collector
+- Client
 categories:
 - Scouter
 toc: true
@@ -17,6 +18,10 @@ toc_sticky: true
 toc_label: Contents
 popular: true
 ---
+# Purpose
+Collector: Agent가 전송한 데이터 수집/처리  
+Client: 수집된 성능 정보를 확인하기 위한 Client 프로그램
+
 # 1. Install JDK 1.8 or higher
 ## 1.1 Install openjdk
 
@@ -67,7 +72,7 @@ Hello World!!
 # 2. Install Scouter Collector
 <center><img src="/assets/images/posts/scouter/install/collector-1.png" width="150%" height="150%"></center>
 
-### Collector, client Download link
+### Scouter download link
 [Releases · scouter-project/scouter](https://github.com/scouter-project/scouter/releases)
 
 ## 2.1 Install Scouter Collector
