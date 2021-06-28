@@ -1,5 +1,5 @@
 ---
-title: \[Linux\]\(Command\) ln - make links between files
+title: \[Linux\]\(Command\)ln - make links between files
 layout: single
 author_profile: true
 read_time: true
