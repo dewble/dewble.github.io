@@ -10,6 +10,7 @@ tag:
 - Linux
 - Troubleshooting
 - Slow servers
+- top
 categories:
 - Linux
 toc: true
@@ -21,7 +22,7 @@ popular: true
 It can display system summary information as well as a list of tasks currently being managed by the Linux kernel.  
 And you can find load problems about CPU, RAM, DISK I/O.
 
-<center><img src="/assets/images/posts/linux/troubleshooting-top/top-1.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/linux/troubleshooting/top/top-1.png" width="150%" height="150%"></center>
 
 ## How to use top command
 
@@ -29,31 +30,31 @@ And you can find load problems about CPU, RAM, DISK I/O.
 
 cpu core 별 사용률 
 
-<center><img src="/assets/images/posts/linux/troubleshooting-top/top-2.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/linux/troubleshooting/top/top-2.png" width="150%" height="150%"></center>
 
 ### Shift + p
 
 정렬을 CPU 기준으로 높은 것을 기준으로 상단에 보여진다. 
 
-<center><img src="/assets/images/posts/linux/troubleshooting-top/top-3.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/linux/troubleshooting/top/top-3.png" width="150%" height="150%"></center>
 
 ### Shift + m
 
 정렬을 Memory 기준으로 높은 것을 기준으로 상단에 보여진다.
 
-<center><img src="/assets/images/posts/linux/troubleshooting-top/top-4.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/linux/troubleshooting/top/top-4.png" width="150%" height="150%"></center>
 
 ### Shift + t
 
 정렬을 Time 기준으로 오랜 시간동안 동작한 작업을 기준으로 상단에 보여진다.
 
-<center><img src="/assets/images/posts/linux/troubleshooting-top/top-5.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/linux/troubleshooting/top/top-5.png" width="150%" height="150%"></center>
 
 ### Shift + f
 
 화면에 표시된 목록 리스트를 선정하여 원하는 출력을 얻을 수 있다.
 
-<center><img src="/assets/images/posts/linux/troubleshooting-top/top-6.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/linux/troubleshooting/top/top-6.png" width="150%" height="150%"></center>
 
 ### Save results to text
 
@@ -69,7 +70,7 @@ top의 전체 출력 결과를 보고 싶거나, 출력을 별도 파일로 저�
 top -b -n 1
 ```
 
-<center><img src="/assets/images/posts/linux/troubleshooting-top/top-7.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/linux/troubleshooting/top/top-7.png" width="150%" height="150%"></center>
 
 - 해당 정보를 top_output.txt 으로 저장
 
@@ -77,7 +78,7 @@ top -b -n 1
 top -b -n 1 > top_output.txt
 ```
 
-<center><img src="/assets/images/posts/linux/troubleshooting-top/top-8.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/linux/troubleshooting/top/top-8.png" width="150%" height="150%"></center>
 
 - top의 출력 결과를 화면으로도 보고 파일로도 기록
 
@@ -94,7 +95,7 @@ top -b -n 1 | tee top_output
 
 ## Understanding top output information
 
-<center><img src="/assets/images/posts/linux/troubleshooting-top/top-9.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/linux/troubleshooting/top/top-9.png" width="150%" height="150%"></center>
 
 ### Cpu(s) : CPU가 현재 하고 있는 일들에 관한 정보를 제공
 
@@ -143,7 +144,7 @@ iostat 2 (2초마다 결과 보기)
 yum install -y sysstat
 ```
 
-<center><img src="/assets/images/posts/linux/troubleshooting-top/top-11.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/linux/troubleshooting/top/top-11.png" width="150%" height="150%"></center>
 
 ### CPU
 
@@ -199,7 +200,7 @@ Steal CPU의 사용시간을 비율로 출력한 값 입니다.
 iostat -p /dev/mapper/centos-root
 ```
 
-<center><img src="/assets/images/posts/linux/troubleshooting-top/top-12.png" width="150%" height="150%"></center>  
+<center><img src="/assets/images/posts/linux/troubleshooting/top/top-12.png" width="150%" height="150%"></center>  
 
 ## EXAMPLE
 백업 작업을 I/O 증가의 원인으로 생각할때
@@ -221,7 +222,7 @@ iostat -p /dev/mapper/centos-root
 
 ## 메모리 고갈 문제 진단하기
 
-<center><img src="/assets/images/posts/linux/troubleshooting-top/top-10.png" width="150%" height="150%"></center>
+<center><img src="/assets/images/posts/linux/troubleshooting/top/top-10.png" width="150%" height="150%"></center>
 
 ### Mem
 
