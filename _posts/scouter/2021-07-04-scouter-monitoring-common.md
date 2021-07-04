@@ -1,5 +1,5 @@
 ---
-title: \[Scouter\]\(Monitoring\)Monitoring - common
+title: \[Scouter\]\(Monitoring\)Monitoring - Common
 layout: single
 author_profile: true
 read_time: true
