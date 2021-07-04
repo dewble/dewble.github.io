@@ -65,7 +65,7 @@ Collector → 데몬 → 항목선택
 - XLog
 
 ## OS graphs list
-
+[[Scouter](Monitoring)Monitoring - Host object](https://dewble.com/scouter/scouter-monitoring-host)
 - CPU
 - Memory
 - NETwork TX/RX Byte

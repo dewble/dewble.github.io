@@ -27,6 +27,9 @@ monitoring real time resources provided by OS
 1. Performance Counter: 시간에 따라 변하는 값을 실시간 차트 형태로 보여준다.
 2. Object Request: 사용자가 특정 성능 정보를 요청하여 조회하는 기능
 
+### CPU, Memory, Net graphs
+<center><img src="/assets/images/posts/scouter/monitoring/monitoring-host-0.png" width="150%" height="150%"></center>
+
 ---
 
 # CPU monitoring
