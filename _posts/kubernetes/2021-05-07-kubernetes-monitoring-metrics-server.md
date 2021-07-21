@@ -58,10 +58,10 @@ containers:
         image: gcr.io/k8s-staging-metrics-server/metrics-server:master
         imagePullPolicy: IfNotPresent
         args:
-          **- --cert-dir=/tmp
+          - --cert-dir=/tmp
           - --secure-port=4443
           - --kubelet-insecure-tls
-          - --kubelet-preferred-address-types=InternalIP**
+          - --kubelet-preferred-address-types=InternalIP
 ```
 
 ### 2. edit deployment (add selector)
@@ -72,19 +72,19 @@ kind: Deployment
 metadata:
   name: metrics-server
   namespace: kube-system
-  **labels:
-    k8s-app: metric-server**
+  labels: ## 추가
+    k8s-app: metrics-server
 spec:
-  **selector:
+  selector: ## 추가
     matchLabels:
-      k8s-app: metric-server**
+      k8s-app: metrics-server
   strategy:
     rollingUpdate:
       maxUnavailable: 0
   template:
-    **metadata:
-      labels:
-        k8s-app: metric-server** 
+    metadata:
+      labels: ## 추가
+        k8s-app: metrics-server 
 ```
 
 ```bash
