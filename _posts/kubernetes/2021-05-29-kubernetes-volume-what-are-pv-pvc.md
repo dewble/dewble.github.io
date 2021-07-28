@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Volume\)What are PV, PVC?
+title: \[Kubernetes\]\(Volume\)What are PV and PVC?
 layout: single
 author_profile: true
 read_time: true
