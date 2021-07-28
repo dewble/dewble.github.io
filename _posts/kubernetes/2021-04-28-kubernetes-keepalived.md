@@ -65,7 +65,7 @@ vrrp_instance VI_1 {
 
 ControlPlane 2 에서는  1 과 동일하게 구성하되 priority만 다르게 설정 한다.
 
-## master1
+## ControlPlane1
 
 ```bash
 ! Configuration File for keepalived
@@ -90,7 +90,7 @@ vrrp_instance VI_1 {
 }
 ```
 
-## master2
+## ControlPlane2
 
 ```bash
 ! Configuration File for keepalived
