@@ -9,7 +9,7 @@ related: true
 tag:
 - Scouter
 - Monitoring
-- Host-agent
+- Host Agent
 categories:
 - Scouter
 toc: true

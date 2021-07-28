@@ -9,8 +9,8 @@ related: true
 tag:
 - Scouter
 - Monitoring
-- Host-agent
-- Java-agent
+- Host Agent
+- Java Agent
 categories:
 - Scouter
 toc: true

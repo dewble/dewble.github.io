@@ -11,7 +11,7 @@ tag:
 - volume
 - persistentvolume
 - persistentvolumeClaim
-- What-is
+- What is
 categories:
 - Kubernetes
 toc: true
