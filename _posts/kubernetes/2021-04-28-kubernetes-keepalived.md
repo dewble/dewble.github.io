@@ -63,7 +63,7 @@ vrrp_instance VI_1 {
 }
 ```
 
-ControlPlane 2 에서는  1 과 동일하게 구성하되 priority와 라우터 아이디만 다르게 설정 한다.
+ControlPlane 2 에서는  1 과 동일하게 구성하되 priority만 다르게 설정 한다.
 
 ## master1
 
