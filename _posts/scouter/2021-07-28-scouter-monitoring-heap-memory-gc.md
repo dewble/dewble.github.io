@@ -1,5 +1,5 @@
 ---
-title: \[Scouter\]\(Monitoring\)What are - Heap Memory, Garbage Collection
+title: \[Scouter\]\(Monitoring\)What are Heap Memory and Garbage Collection(GC)
 layout: single
 author_profile: true
 read_time: true
