@@ -10,6 +10,7 @@ tag:
 - Kubernetes
 - Registry
 - Harbor
+- Install
 categories:
 - Kubernetes
 toc: true
@@ -53,6 +54,7 @@ kubectl create ns harbor
 Harbor를 도메인으로 접속, 사용하기 위해서는 HTTPS 접속이 필요하다.
 
 테스트를 위한 인증서는 OpenSSL로 생성후 테스트를 진행한다.
+[Use TLS certificates as secret](https://dewble.com/kubernetes/kubernetes-security-use-tls-certificates-as-secret/)
 
 ```bash
 ## yaml 파일 생성

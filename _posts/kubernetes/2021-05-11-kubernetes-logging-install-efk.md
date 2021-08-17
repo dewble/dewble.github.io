@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Logging\)Install EFK for kubernetes logging
+title: \[Kubernetes\]\(Logging\)Install EFK for kubernetes logging with helm chart
 layout: single
 author_profile: true
 read_time: true
@@ -12,6 +12,7 @@ tag:
 - Elasticsearch
 - Fluentd
 - Kibana
+- Install
 categories:
 - Kubernetes
 toc: true

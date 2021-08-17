@@ -10,6 +10,7 @@ tag:
 - Kubernetes
 - Registry
 - Helm
+- Install
 categories:
 - Kubernetes
 toc: true

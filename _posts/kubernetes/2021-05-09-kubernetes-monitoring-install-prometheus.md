@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Monitoring\)Install prometheus for kubernetes monitoring
+title: \[Kubernetes\]\(Monitoring\)Install prometheus for kubernetes monitoring with helm chart
 layout: single
 author_profile: true
 read_time: true
@@ -11,6 +11,7 @@ tag:
 - Monitoring
 - Dashboard
 - Prometheus
+- Install
 categories:
 - Kubernetes
 toc: true
