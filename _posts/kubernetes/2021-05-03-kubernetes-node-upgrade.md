@@ -18,34 +18,37 @@ toc_sticky: true
 toc_label: Contents
 popular: true
 ---
-# Purpose
-Kubelet, Kubeadm version upgrade
+# **Purpose**
+Kubelet, kubectl, kubeadm version upgrade
 
 ---
 
 # Work process
 
-1. 기본 컨트롤 플레인 노드를 업그레이드한다.
-2. 추가 컨트롤 플레인 노드를 업그레이드한다.
-3. 워커(worker) 노드를 업그레이드한다.
-
-### Check version
-
-```bash
-kubectl version --short
-```
+1. 노드 업그레이드 순서 kubeadm upgrade → kubelet, kubectl upgrade
+    1. 기본 컨트롤 플레인 노드를 업그레이드한다.
+    2. 추가 컨트롤 플레인 노드를 업그레이드한다.
+    3. 워커(worker) 노드를 업그레이드한다.
 
 ---
 
 # Master node
 
+# 1. kubeadm upgrade
+
+### Check version
+
+```bash
+kubeadm version
+```
+
 ## Decision version
 
 ```bash
-kubeadm upgrade plan
-
 ## yum list 에서 확인
 yum list --showduplicates kubeadm --disableexcludes=kubernetes
+
+>> 1.21.4-0
 ```
 
 ## Master node drain
@@ -61,30 +64,41 @@ node01         Ready                      <none>   17m   v1.18.0
 
 ## Master node upgrade && uncordon
 
-- Master Upgraded to v1.19.0
-- Master Kubelet Upgraded to v1.19.0
-
 ```bash
-apt update
-apt install kubeadm=1.19.0-00
+
+## 위에서 확인한 버전 install
 yum install -y kubeadm-1.19.x-0 --disableexcludes=kubernetes
+yum install -y kubeadm-1.21.4-0 --disableexcludes=kubernetes
 [Y]
 
-## 업그레이드 적용
+## upgrade plan 확인
+kubeadm upgrade plan
+
+## 업그레이드 적용 (첫 번째 컨트롤플레인 노드에서 아래 명령 실행)
 kubeadm upgrade apply v1.19.0 
-[Y]
+kubeadm upgrade apply v1.21.4
+## 첫번째 이후 다른 컨트롤 플레인 노드의 경우 아래명령 실행
+kubeadm upgrade node 
 
-master $ kubectl version --short
-Client Version: v1.18.0
-Server Version: v1.19.0
-
+## upgrade version 확인
+kubeadm version
 ```
+
+---
+
+# 2. kubelet, kubectl upgrade
 
 ## Kubelet & Kubectl upgrade
 
 ```bash
+## yum list 에서 확인
+yum list --showduplicates kubelet kubectl --disableexcludes=kubernetes
+
+>> 1.21.4-0
+
 apt install kubelet=1.19.0-00
 yum install -y kubelet-1.19.x-0 kubectl-1.19.x-0 --disableexcludes=kubernetes
+yum install -y kubelet-1.21.4-0 kubectl-1.21.4-0 --disableexcludes=kubernetes
 ```
 
 ## Restart kubelet
@@ -92,6 +106,9 @@ yum install -y kubelet-1.19.x-0 kubectl-1.19.x-0 --disableexcludes=kubernetes
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl restart kubelet
+
+kubelet --version
+kubectl version --short
 ```
 
 ## Uncordon
@@ -104,30 +121,42 @@ kubectl uncordon controlplane
 
 # Worker node
 
+# 1. Kubeadm upgrade
+
 ## Work node drain
 
 ```bash
 kubectl drain node01 --ignore-daemonsets
 ```
 
-## Worker node upgrade
+## Worker node kubeadm upgrade
 
 ```bash
 ssh node01
 ```
 
 ```bash
-apt update
-apt install kubeadm=1.19.0-00 
-[y]
-kubeadm upgrade node
-apt install kubelet=1.19.0-00
-
-or
-
+## controlPlane node 와 버전을 맞춘다
+## install kubeadm
 yum install -y kubeadm-1.19.x-0 --disableexcludes=kubernetes
+yum install -y kubeadm-1.21.4-0 --disableexcludes=kubernetes
+
+## upgrade kubeadm
 kubeadm upgrade node
+
+## check version
+kubeadm version
+```
+
+---
+
+# 2. kubelet, kubectl upgrade
+
+## Worker node kubelet, kubeadm upgrade
+
+```bash
 yum install -y kubelet-1.19.x-0 kubectl-1.19.x-0 --disableexcludes=kubernetes
+yum install -y kubelet-1.21.4-0 kubectl-1.21.4-0 --disableexcludes=kubernetes
 ```
 
 ## Restart kubelet
@@ -135,6 +164,7 @@ yum install -y kubelet-1.19.x-0 kubectl-1.19.x-0 --disableexcludes=kubernetes
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl restart kubelet
+kubelet --version
 
 ```
 
