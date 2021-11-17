@@ -176,8 +176,8 @@ call "%CATALINA_BASE%\bin\setenv.bat"
 tomcat/bin/setenv.bat
 
 ```bash
-set "JAVA_OPTS=%JAVA_OPTS% -javaagent:C:\jadeedu_scouter-jmeter\work\scouter\agent.java\scouter.agent.jar"
-set "JAVA_OPTS=%JAVA_OPTS% -Dscouter.config=C:\jadeedu_scouter-jmeter\work\scouter\agent.java\conf\scouter.conf"
+set "JAVA_OPTS=%JAVA_OPTS% -javaagent:C:\work\scouter\agent.java\scouter.agent.jar"
+set "JAVA_OPTS=%JAVA_OPTS% -Dscouter.config=C:\work\scouter\agent.java\conf\scouter.conf"
 ```
 
 /bin/start.bat
@@ -220,4 +220,10 @@ SCOUTER_CONFIG=/home/asmanager/scouter/agent.java/conf/$NODE_NAME.conf
 ### scouter
 JAVA_OPTS="$JAVA_OPTS -javaagent:/home/asmanager/scouter/agent.java/scouter.agent.jar"
 JAVA_OPTS="$JAVA_OPTS -Dscouter.config=$SCOUTER_CONFIG"
+```
+
+## 3.3 Start Embedded tomcat with scouter agent
+
+```bash
+java -javaagent:scouter/scouter.agent.jar -Dscouter.config=scouter/scouter.conf -jar app.war -Dspring.profiles.active=%DEPLOY_MODE% -Dmaven.test.skip=true -Xms128m -Xmx2048m -XX:+UseG1GC 
 ```
