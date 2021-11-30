@@ -19,7 +19,7 @@ toc_label: Contents
 popular: true
 ---
 # Purpose
-Delete old images  
+Delete old images from harbor registry
 
 ---
 # How to use
