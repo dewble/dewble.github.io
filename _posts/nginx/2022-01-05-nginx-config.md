@@ -17,7 +17,6 @@ toc_label: Contents
 popular: true
 ---
 # Purpose
-
 대용량 파일 업로드가 필요한 경우 아래 옵션에서 size 설정이 필요하다.
 
 # nginx.conf 에 내용 추가
