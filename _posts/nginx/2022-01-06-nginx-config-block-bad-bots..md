@@ -1,5 +1,5 @@
 ---
-title: \[Nginx\]\(Config\)Block bad bots
+title: \[Nginx\]\(Config\)웹 크롤링 차단(Block bad bots) - http_user_agent
 layout: single
 author_profile: true
 read_time: true
