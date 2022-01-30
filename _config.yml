@@ -97,11 +97,14 @@ author:
   avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio: "Crossfit, Travel, Kubernetes, AWS, Devops, Linux, Jenkins, Scouter, Zabbix, Wildfly, Golang, Jmeter, English "
   location: "Republic of Korea"
-  email: "dewble62@gmail.com"
+  # email: "dewble62@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:dewble62@gmail.com"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/jongmin-han-0a19121b4/"
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
     # url: "https://your-website.com"
@@ -118,12 +121,17 @@ author:
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/hanjongmin_"
 
+      
+
 # Site Footer
 footer:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:dewble62@gmail.com"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/jongmin-han-0a19121b4/"
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
     # url: "https://your-website.com"
