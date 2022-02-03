@@ -17,7 +17,6 @@ toc_label: Contents
 popular: true
 ---
 # Purpose
-
 응답헤더에 표시되는 nginx 정보 제거
 
 # 버전 정보만 숨기기
@@ -36,6 +35,8 @@ server_tokens off;
 ```
 
 # 버전 정보 변경 - 모듈 추가 필요
+
+nginx 1.20.1 → JWS (원하는 내용으로 작성)
 
 ### 사용 모듈
 
