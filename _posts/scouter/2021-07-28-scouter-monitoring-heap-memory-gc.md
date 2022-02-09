@@ -25,7 +25,7 @@ popular: true
 java 8 이상 부터는 Permanet Generation → Metaspace로 표현한다.
 
 운영을 위해
-Xms(young generation size), Xmx(initial heap size), PermSize를 설정하여 사용한다.
+Xms(initial heap size), Xmx(maximum heap size), PermSize(Metaspace)를 설정하여 사용한다.
 
 ---
 
@@ -94,6 +94,8 @@ Young Generation 이 차게되면 Minor GC가 동작한다.
 - GC Time이 길어질수록 사용자의 응답시간이 느려진다.
 - GC Time이 1초가 안넘도록 노력해야 한다.
 
+> [JVM Option 및 용어 참고](https://www.oracle.com/java/technologies/javase/vmoptions-jsp.html)
+
 ---
 
 # Example
@@ -110,6 +112,5 @@ Heap 메모리가 올라가면 GC Time과 Count가 올라가고 이때문에 CPU
 
 프레임워크 설계가 잘못되면 상승할 수 있음.
 
-dafult Perm: os 스펙마다 다름
 
 <center><img src="/assets/images/posts/scouter/monitoring/monitoring-heap-gc-13.png" width="150%" height="150%"></center>
