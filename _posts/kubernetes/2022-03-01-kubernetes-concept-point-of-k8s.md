@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Concept\)쿠버네티스의 핵심
+title: \[Kubernetes\]\(Concept\)쿠버네티스 개념 - 지향점
 layout: single
 author_profile: true
 read_time: true
@@ -24,7 +24,7 @@ popular: true
 
 # Immutable Infrastructure
 
-한번 구축한 인프라는 변경할 필요가 없이 파기하고 새로운 것을 구축해버리면 되므로 지금까지 부하가 컸던 인프라의 변경 이력을 관리할 필요가 없어졌다. 
+한번 구축한 인프라는 변경할 필요 없이 파기하고 새로운 것을 구축해버리면 되므로 지금까지 부하가 컸던 인프라의 변경 이력을 관리할 필요가 없어졌다. 
 
 그리고 인프라의 변경 이력을 관리하는 것이 아니라 지금 현재 움직이고 있는 인프라의 상태를 관리하면 되도록 바뀌어 왔다. 이러한 인프라를 Immutable Infrastructure 라고 한다.
 
