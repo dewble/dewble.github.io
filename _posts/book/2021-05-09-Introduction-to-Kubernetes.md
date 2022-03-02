@@ -22,7 +22,7 @@ popular: true
 내용: 90가지 예제로 배우는 컨테이너 관리 자동화 표준  
 저자: 정원천, 공용준, 홍석용, 정경록  
 출판사: 동양북스  
-<img src="/assets/images/posts/book/start-kubernetes.jpg" width="50%" height="50%">
+<img src="/assets/images/posts/book/kubernetes/start-kubernetes.jpg" width="50%" height="50%">
 
 ---
 # Rate

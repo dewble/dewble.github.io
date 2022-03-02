@@ -18,7 +18,6 @@ toc_label: Contents
 popular: true
 ---
 # 지향점
-
 1. 시스템 구축을 위한 수작업을 줄인다.
 2. 시스템을 셀프 서비스로 운용한다.
 
