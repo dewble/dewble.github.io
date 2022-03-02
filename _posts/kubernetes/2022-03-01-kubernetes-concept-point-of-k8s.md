@@ -42,3 +42,9 @@ popular: true
 Immutable Infrastructure와 선언적 설정을 사용하여 시스템을 효율적으로 운용관리하는 구조를 취하고 있는데, 이러한 처리를 가능한 한 사람에 의한 수작업이 아니라 컴퓨팅 리소스가 자율적으로 운용할 수 있도록 소프트웨어로 실현하고 있다.
 
 쿠버네티스가 어플리케이션의 상태를 항상 감시하며 이상이 있으면 미리 '시스템 본래의 모습'으로 설정된 상태가 되도록 쿠버네티스 자신이 자동으로 API를 사용하여 재시작시키거나 클러스터에서 장애를 제거하여 시스템을 복구 한다.
+
+---
+> **완벽한 IT 인프라 구축의 자동화를 위한 Kubernetes(쿠버네티스) -** [Asa Shiho](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788956748412&orderClick=LAG&Kc=#)
+ 지음
+[https://dewble.com/book/kubernetes-with-azure/](https://dewble.com/book/kubernetes-with-azure/)
+>
