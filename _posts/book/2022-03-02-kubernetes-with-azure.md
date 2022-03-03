@@ -19,9 +19,9 @@ popular: true
 ---
 # Book information
 책: [완벽한 IT 인프라 구축의 자동화를 위한 Kubernetes(쿠버네티스)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788956748412&orderClick=LAG&Kc=)  
-내용: Azure를 사용한 쿠버네티스의 개념 파악과 실전 응용
-저자: Asa Shiho
-출판사: 정보문화사  
+내용: Azure를 사용한 쿠버네티스의 개념 파악과 실전 응용  
+저자: Asa Shiho  
+출판사: 정보문화사   
 <img src="/assets/images/posts/book/kubernetes/kubernetes-with-azure.jpg" width="50%" height="50%">
 
 ---
@@ -34,4 +34,4 @@ popular: true
 # Review
 Azure 기반의 예제들을 제공해 준다.
 
-설명이 친절하고 이해를 돕기 위한 그림이 많아 쿠버네티스를 처음 접하는 사람들에게 추천한다. 
+읽었던 서적중에 가장 설명이 친절하고 이해를 돕기 위한 그림이 많아 쿠버네티스를 처음 접하는 사람들에게 추천한다. 
