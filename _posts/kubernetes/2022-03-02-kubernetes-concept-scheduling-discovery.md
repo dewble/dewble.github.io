@@ -30,6 +30,7 @@ popular: true
 다양한 요구사항을 매니페스트 파일로 정의하여 이를 바탕으로 클러스터 안의 적절한 위치에 어플리케이션을 자동으로 배치해 간다.
 
 쿠버네티스에서 스케줄링은 Kubelet이 파드를 실행할 수 있도록 파드가 노드에 적합한지 확인하는 것을 말한다.
+<center><img src="/assets/images/posts/kubernetes/concept/concept2-1.png" width="150%" height="150%" ></center>  
 
 
 
@@ -40,6 +41,7 @@ popular: true
 이때 배포된 어플리케이션이 어디에 있는지를 찾아내는 장치를 서비스 디스커버리라고 한다.
 
 쿠버네티스에서는 클러스터 안에 구성 레지스트리를 갖고 있어서 이를 바탕으로 서비스 디스커버리를 동적으로 수행한다.
+<center><img src="/assets/images/posts/kubernetes/concept/concept2-2.png" width="150%" height="150%" ></center>  
 
 ---
 
