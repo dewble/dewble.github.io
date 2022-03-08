@@ -32,8 +32,6 @@ popular: true
 쿠버네티스에서 스케줄링은 Kubelet이 파드를 실행할 수 있도록 파드가 노드에 적합한지 확인하는 것을 말한다.
 <center><img src="/assets/images/posts/kubernetes/concept/concept2-1.png" width="150%" height="150%" ></center>  
 
-
-
 # 서비스 디스커버리
 
 일반적인 웹 어플리케이션의 경우 리퀘스트를 받은 프론트엔드 어플리케이션이 사용자의 트랜잭션을 처리하기 위해 백엔드 서비스를 호출한다.

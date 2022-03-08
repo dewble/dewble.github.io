@@ -20,6 +20,15 @@ popular: true
 # Purpose
 서버의 물리적인 자원교체, 버전 업그레이드를 위해 클러스터에서 노드를 제외시키기 위함.
 
+# Work process
+1. 노드 제외
+    1. 노드를 클러스터에서 제외시킨다
+    2. 노드를 리셋시킨다 (제외시킨 노드에서)
+2. 노드 추가
+    1. Join을 위한 토큰값을 얻는다
+    2. 얻은 토큰으로 클러스터에 Join
+
+
 ---
 # 1. Node drain & delete
 
@@ -64,7 +73,7 @@ rm -rf $HOME/.kube/config
 
 ---
 # 3. Get token, certs and hash key
-
+클러스터에 Join하기 위해 아래의 3가지 토큰을 구한다  
 ## 3.1 Create token
 
 ```bash
@@ -92,7 +101,8 @@ root@AJTV005 [~/scripts]openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | op
 ```
 
 ## 3.3 인증서 생성 & 업로드
-
+인증서는 아래 두 가지 방법으로 업로드 할 수 있다.  
+인증서 생성 후 업로드 or 임의의값으로 생성 후 업로드
 ### 3.3.1 인증서 인증서 생성 & 업로드
 
 ```bash
