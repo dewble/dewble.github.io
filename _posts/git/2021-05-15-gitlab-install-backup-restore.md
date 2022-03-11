@@ -1,5 +1,5 @@
 ---
-title: \[DevOps\]\(Gitlab\)Install / Backup / Restore gitlab
+title: \[Git\]\(Gitlab\)Install / Backup / Restore gitlab
 layout: single
 author_profile: true
 read_time: true
@@ -9,9 +9,10 @@ related: true
 tag:
 - DevOps
 - Gitlab
+- Git
 - CI/CD
 categories:
-- DevOps
+- Git
 toc: true
 toc_sticky: true
 toc_label: Contents
