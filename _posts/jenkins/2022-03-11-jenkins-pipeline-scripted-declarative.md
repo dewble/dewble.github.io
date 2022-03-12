@@ -27,11 +27,10 @@ popular: true
     - Scripted: groovy 기반에 구축된 첫 번째 pipeline이기 때문에 더 엄격한 groovy 기반 구문을 사용
     - Declarative: 더 간단하고 더 많은 옵션이 있는 Groovy 구문을 제공하기 위해 도입
 
-> Scripted VS Declarative
+> Scripted VS Declarative  
 [https://www.jenkins.io/doc/book/pipeline/#declarative-versus-scripted-pipeline-syntax](https://www.jenkins.io/doc/book/pipeline/#declarative-versus-scripted-pipeline-syntax)
 
->groovy DSL(Domain Specific Language)
-: 어떤 목적이 있고 그 목적만 달성할 수 있는 언어
+> groovy DSL(Domain Specific Language) : 어떤 목적이 있고 그 목적만 달성할 수 있는 언어  
 [https://lannstark.tistory.com/13](https://lannstark.tistory.com/13)
  
 
