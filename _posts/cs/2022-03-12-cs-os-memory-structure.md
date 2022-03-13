@@ -33,3 +33,5 @@ popular: true
         - 스택 영역에 저장되는 함수의 ***호출 정보***를 스택프레임이라고 한다.
         - 스택 영역은 ***함수의 호출이 완료되면 소멸***한다.
         - 높은 주소에서 낮은 주소로 메모리가 할당 된다.
+
+<center><img src="/assets/images/posts/cs/os/memory-structure.png" width="150%" height="150%" ></center>  
