@@ -73,3 +73,19 @@ LOG=/box/java_logs
 
 find $LOG -type f -mtime +14 |xargs rm -f
 ```
+
+# 오래된 로그 이동, 압축, 삭제
+
+기간에 따라 오래된 로그를 archived dir로 이동, 압축, 삭제
+
+```bash
+## 30일 넘은 로그 파일은 archived 폴더로 이동
+/bin/find /box/java_logs/application -name "server.*" ! -name "*.gz" -mtime +30 |xargs mv -t /box/java_logs/application/archived
+
+## archived 하위의 30일 넘은 로그 파일은 gz으로 압축
+/bin/find /box/java_logs/application/archived -name "server.*" ! -name "*.gz" -mtime +30 |xargs gzip
+
+## archived 하위의 90일 이상된 파일 삭제
+/bin/find /box/java_logs/application/archived -name "*.gz" -mtime +90 -delete
+
+```
