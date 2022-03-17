@@ -25,6 +25,7 @@ popular: true
 - 배포 전략에 대하여 설명하라
     - 각 배포방식이 사용자한테 영향을 미치고 않고 배포는 효율적으로 할 수 있는 방법을 설명하라
 - 젠킨스 파이프라인에서 배포를 위해 할 수 있는 설정들을 설명하라
+
 ---
 # Kubernetes
 - 구축했던 클러스터 구성 설명하라
@@ -37,6 +38,7 @@ popular: true
     - Docker VS 그외 CRI의 차이점을 설명하라
     - Containerd에서 이미지 빌드, 푸쉬하는 과정을 설명하라
 - EFK의 구성과 어떻게 활용할 수 있는지 설명하라
+
 ---
 # Cloud
 - 클라우드의 Paas 플랫폼의 장점 → HPC(High Perpormance Computing)에대한 설명을 원했던것 같음
