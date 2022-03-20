@@ -24,7 +24,12 @@ popular: true
 - API Server는 클러스터 안의 리소스를 작성, 참조, 갱신, 삭제하기 위해 RESTful 인터페이스를 갖고 있다.
 - 클러스터의 상태 데이터를 갖고 있는 etcd에 대한 액세스도 이 API Server를 통해 한다.
 
+---
+
 # Pod 스케줄링 순서
+
+<center><img src="/assets/images/posts/kubernetes/concept/pod/pod-scheduling.png" width="150%" height="150%" ></center>  
+
 
 ### 1. kubectl 명령 실행 - 사용자
 
