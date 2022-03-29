@@ -19,7 +19,9 @@ toc_label: Contents
 popular: true
 ---
 # Purpose
-Create TLS secret for HTTPS use
+Create TLS secret for HTTPS use  
+
+기존에 떠 있는 ingress에 같은 이름으로 인증서 시크릿 교체시 ingress 나 pod 재시작 없이 인증서 적용 가능하다  
 
 # Generate openssl Cert for testing
 
@@ -103,3 +105,9 @@ spec:
     - example.com
     secretName: tlssecret 
 ```
+
+
+---
+
+> [https://kubernetes.io/ko/docs/concepts/services-networking/ingress/#tls](https://kubernetes.io/ko/docs/concepts/services-networking/ingress/#tls)
+>
