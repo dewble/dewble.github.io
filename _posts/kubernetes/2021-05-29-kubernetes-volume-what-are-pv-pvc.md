@@ -46,7 +46,8 @@ A request for storage by a user. It is similar to a Pod.
 ---
 # PV  (PersistentVolume)
 
-볼륨 자체. 클러스터 안에서 자원으로 다룬다. 파드하고는 별개로 관리되고 별도의 생명 주기가 있다.
+볼륨 자체. 클러스터 안에서 자원으로 다룬다. 파드하고는 별개로 관리되고 별도의 생명 주기가 있다.  
+퍼시스턴트 볼륨을 사용하면 데이터를 저장했던 노드가 아닌 다른 노드에서 컨테이너를 재시작하더라도 데이터를 저장한 볼륨을 그대로 사용할 수 있도록 한다.  
 
 ---
 # PVC (PersistentVolumeClaim)
