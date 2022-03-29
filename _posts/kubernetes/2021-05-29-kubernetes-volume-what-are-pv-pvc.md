@@ -21,16 +21,24 @@ popular: true
 ---
 # Purpose
 ### PersistentVolume
-A piece of storage in the cluster that has been provisioned by an administrator or dynamically provisioned using Storage Classes.  
+A piece of storage in the cluster that has been provisioned by an administrator or dynamically provisioned using Storage Classes.
 
-*퍼시스턴트볼륨* (PV)은 관리자가 프로비저닝하거나 [스토리지 클래스](https://kubernetes.io/ko/docs/concepts/storage/storage-classes/)를 사용하여 동적으로 프로비저닝한 클러스터의 스토리지이다. 노드가 클러스터 리소스인 것처럼 PV는 클러스터 리소스이다. PV는 Volumes와 같은 볼륨 플러그인이지만, PV를 사용하는 개별 파드와는 별개의 라이프사이클을 가진다. 이 API 오브젝트는 NFS, iSCSI 또는 클라우드 공급자별 스토리지 시스템 등 스토리지 구현에 대한 세부 정보를 담아낸다.
+- *퍼시스턴트볼륨* (PV)은 관리자가 프로비저닝하거나 [스토리지 클래스](https://kubernetes.io/ko/docs/concepts/storage/storage-classes/)를 사용하여 동적으로 프로비저닝한 클러스터의 스토리지이다.
+- 노드가 클러스터 리소스인 것처럼 PV는 클러스터 리소스이다.
+- PV는 Volumes와 같은 볼륨 플러그인이지만, PV를 사용하는 개별 파드와는 별개의 라이프사이클을 가진다.
+- 이 API 오브젝트는 NFS, iSCSI 또는 클라우드 공급자별 스토리지 시스템 등 스토리지 구현에 대한 세부 정보를 담아낸다.
 
 ### PersistentVolumeClaim
-A request for storage by a user. It is similar to a Pod.  
 
-*퍼시스턴트볼륨클레임* (PVC)은 사용자의 스토리지에 대한 요청이다. 파드와 비슷하다. 파드는 노드 리소스를 사용하고 PVC는 PV 리소스를 사용한다. 파드는 특정 수준의 리소스(CPU 및 메모리)를 요청할 수 있다. 클레임은 특정 크기 및 접근 모드를 요청할 수 있다(예: ReadWriteOnce, ReadOnlyMany 또는 ReadWriteMany로 마운트 할 수 있음. [AccessModes](https://kubernetes.io/ko/docs/concepts/storage/persistent-volumes/#%EC%A0%91%EA%B7%BC-%EB%AA%A8%EB%93%9C) 참고).
+A request for storage by a user. It is similar to a Pod.
+
+- *퍼시스턴트볼륨클레임* (PVC)은 사용자의 스토리지에 대한 요청이다. 파드와 비슷하다.
+- 파드는 노드 리소스를 사용하고 PVC는 PV 리소스를 사용한다.
+- 파드는 특정 수준의 리소스(CPU 및 메모리)를 요청할 수 있다.
+- 클레임은 특정 크기 및 접근 모드를 요청할 수 있다(예: ReadWriteOnce, ReadOnlyMany 또는 ReadWriteMany로 마운트 할 수 있음. [AccessModes](https://kubernetes.io/ko/docs/concepts/storage/persistent-volumes/#%EC%A0%91%EA%B7%BC-%EB%AA%A8%EB%93%9C) 참고).
 
 > [https://kubernetes.io/docs/concepts/storage/persistent-volumes/#introduction](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#introduction)
+>
 
 ## PV, PVC, Pod template
 <center><img src="/assets/images/posts/kubernetes/volume/volume-pv-pvc1.png" width="150%" height="150%" ></center>  
