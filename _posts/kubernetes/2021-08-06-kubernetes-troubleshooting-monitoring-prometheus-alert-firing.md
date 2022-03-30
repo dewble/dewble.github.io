@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Monitoring\)Prometheus - troubleshooting alert firing(etcd,kubelet,kube-proxy)
+title: \[Kubernetes\]\(troubleshooting\)Prometheus alert firing(etcd,kubelet,kube-proxy)
 layout: single
 author_profile: true
 read_time: true
