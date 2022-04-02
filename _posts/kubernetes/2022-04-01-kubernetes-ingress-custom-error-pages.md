@@ -228,3 +228,4 @@ data:
 www/404.html 에 작성한 페이지가 호출된다.
 
 <center><img src="/assets/images/posts/kubernetes/ingress/ingress-custom-error-pages.png" width="150%" ></center>  
+
