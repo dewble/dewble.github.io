@@ -16,6 +16,7 @@ toc: true
 toc_sticky: true
 toc_label: Contents
 popular: true
+---
 # Kubernetes DNS
 K8s에서는 클러스터 안에서만 사용하는 DNS를 설정할 수 있다. 
 
