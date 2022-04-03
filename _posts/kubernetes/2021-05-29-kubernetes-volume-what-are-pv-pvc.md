@@ -8,9 +8,9 @@ share: true
 related: true
 tag:
 - Kubernetes
-- volume
-- persistentvolume
-- persistentvolumeClaim
+- Volume
+- PersistentVolumeClaim
+- PersistentVolume
 - What is
 categories:
 - Kubernetes

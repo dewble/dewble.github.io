@@ -8,9 +8,9 @@ share: true
 related: true
 tag:
 - Kubernetes
-- volume
-- persistentvolume
-- persistentvolumeClaim
+- Volume
+- PersistentVolumeClaim
+- PersistentVolume
 - How to
 categories:
 - Kubernetes
@@ -139,7 +139,9 @@ NAME          CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM         
 pv-hostpath   2Gi        RWO            Delete           Bound    default/pvc-hostpath   manual                  5h7m
 ```
 
-PV가 PVC에 연결되어서 STATUS 항목이 Bound 로 나타난다
+PV가 PVC에 연결되어서 STATUS 항목이 Bound 로 나타난다.
+
+---
 
 # PVC 크기 늘리기
 
