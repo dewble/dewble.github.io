@@ -37,6 +37,10 @@ kubectl -n [namespace] create secret docker-registry [secret-name] --docker-serv
 
 # Verify secret
 
+namespace: springboot  
+secret-name: join-harbor
+
+
 ```bash
 k -n springboot get secrets join-harbor -o yaml
 ```
