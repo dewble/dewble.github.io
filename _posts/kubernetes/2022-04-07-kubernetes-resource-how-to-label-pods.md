@@ -140,7 +140,7 @@ nginx-pod-f   1/1     Running   0          49s   app=photo-view,env=prod
 
 ## 라벨을 변경해본다
 
-라벨을 변경하려면 매니페스트 파일을 변경한다. 작성한 포드 'nginx-pod'a'의 env 값을 'test' 에서 'stage'로 변경한다.
+라벨을 변경하려면 매니페스트 파일을 변경한다. 작성한 포드 'nginx-pod-a'의 env 값을 'test' 에서 'stage'로 변경한다.
 
 ```yaml
 apiVersion: v1
