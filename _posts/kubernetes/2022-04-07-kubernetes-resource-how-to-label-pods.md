@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Concept\)How to label pods
+title: \[Kubernetes\]\(Resource\)How to label pods
 layout: single
 author_profile: true
 read_time: true
@@ -8,9 +8,10 @@ share: true
 related: true
 tag:
 - Kubernetes
-- Concept
+- Resource
 - Label
 - Pod
+- How to
 categories:
 - Kubernetes
 toc: true
@@ -27,7 +28,7 @@ popular: true
 
 그래서 나온 개념이 라벨 이다.
 
-# 포드에 라벨 설정
+# 파드에 라벨 설정
 
 라벨은 Key-Value 형으로 설정한다. 
 
