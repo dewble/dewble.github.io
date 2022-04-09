@@ -9,7 +9,7 @@ related: true
 tag:
 - Kubernetes
 - Concept
-- Namespace
+- Resource
 categories:
 - Kubernetes
 toc: true
