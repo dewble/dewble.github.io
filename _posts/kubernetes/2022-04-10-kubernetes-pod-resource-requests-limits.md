@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Concept\)Resource Management for Pods and Containers
+title: \[Kubernetes\]\(Pod\)Resource Management for Pods and Containers
 layout: single
 author_profile: true
 read_time: true
@@ -8,7 +8,7 @@ share: true
 related: true
 tag:
 - Kubernetes
-- Concept
+- Pod
 - Resource
 categories:
 - Kubernetes
