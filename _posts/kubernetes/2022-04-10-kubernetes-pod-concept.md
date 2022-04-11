@@ -95,20 +95,16 @@ Conditions:
 
 ### Status
 
-Pending → k8s에 파드 생성중
-
-Running → 파드 안 모든 컨테이너가 실행 중
-
-Succeeded → 파드 안 모든 컨테이너가 정상 실행 종료된 상태로 재시작되지 않는다.
-
-Failed → 파드 안 모든 컨테이너 중 정상적으로 실행 종료되지 않은 컨테이너가 있는 상태
-
-Unknown → 파드의 상태를 확인할 수 없는 상태
+- Pending → k8s에 파드 생성중
+- Running → 파드 안 모든 컨테이너가 실행 중
+- Succeeded → 파드 안 모든 컨테이너가 정상 실행 종료된 상태로 재시작되지 않는다.
+- Failed → 파드 안 모든 컨테이너 중 정상적으로 실행 종료되지 않은 컨테이너가 있는 상태
+- Unknown → 파드의 상태를 확인할 수 없는 상태
 
 ### Condtitions.Type
 
-Initialized  → 모든 초기화 컨테이너가 성공적으로 시작 완료
-Ready → 파드는 요청들을 실행할 수 있고 연결된 모든 서비스의 로드밸런싱 풀에 추가되어야 한다.
-ContainersReady → 파드 안 모든 컨테이너가 준비 상태
-PodScheduled → 파드가 하나의 노드로 스케줄을 완료
-Unschedulable → 스케줄러가 자원의 부족이나 다른 제약 등으로 지금 당장 파드를 스케줄 할 수 없다.
+- Initialized  → 모든 초기화 컨테이너가 성공적으로 시작 완료
+- Ready → 파드는 요청들을 실행할 수 있고 연결된 모든 서비스의 로드밸런싱 풀에 추가되어야 한다.
+- ContainersReady → 파드 안 모든 컨테이너가 준비 상태
+- PodScheduled → 파드가 하나의 노드로 스케줄을 완료
+- Unschedulable → 스케줄러가 자원의 부족이나 다른 제약 등으로 지금 당장 파드를 스케줄 할 수 없다.
