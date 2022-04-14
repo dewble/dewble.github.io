@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Concept\)Resource Management for Pods and Containers
+title: \[Kubernetes\]\(Concept\)What is Pod
 layout: single
 author_profile: true
 read_time: true
