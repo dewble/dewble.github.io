@@ -36,7 +36,7 @@ popular: true
 
 ---
 
-# ****Example****
+# Example
 
 replicaset-nginx.yaml
 
@@ -208,7 +208,7 @@ nginx-replicaset-mzvl7	{"app":"nginx-replicaset"}
 nginx-replicaset-pxg88	{"app":"nginx-replicaset"}
 ```
 
-5dnb5 파드의 [metadata.labels.app](http://metadata.labels.app) 필드가 다른 것을 알 수 있다.
+5dnb5 파드의 metadata.labels.app 필드가 다른 것을 알 수 있다.
 
 즉 해당 파드는 nginx-replicaset 이라는 레플리카세트에서 분리되었음을 뜻한다.
 
