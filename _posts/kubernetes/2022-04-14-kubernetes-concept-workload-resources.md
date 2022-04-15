@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Concept\)What is a workload?
+title: \[Kubernetes\]\(Concept\)What is a workload resources?
 layout: single
 author_profile: true
 read_time: true
@@ -30,7 +30,7 @@ popular: true
 
 ---
 
-# Type of workloads
+# Types of workload resources
 
 ## 디플로이먼트(Deployment), 레플리카세트(ReplicaSet)
 
