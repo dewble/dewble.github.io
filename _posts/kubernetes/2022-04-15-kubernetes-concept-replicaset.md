@@ -10,12 +10,7 @@ tag:
 - Kubernetes
 - Concept
 - Workloads
-- Deployment
 - ReplicaSet
-- DaemonSet
-- StatefulSet
-- Job
-- CronJob
 - What is
 categories:
 - Kubernetes
@@ -36,7 +31,7 @@ popular: true
 
 ---
 
-# Example
+# Example - ReplicaSet
 
 replicaset-nginx.yaml
 
