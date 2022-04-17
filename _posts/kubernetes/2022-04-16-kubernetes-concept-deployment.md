@@ -9,7 +9,7 @@ related: true
 tag:
 - Kubernetes
 - Concept
-- Workloads
+- Controller
 - Deployment
 - What is
 categories:
