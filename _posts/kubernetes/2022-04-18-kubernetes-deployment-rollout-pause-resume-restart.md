@@ -53,8 +53,7 @@ REVISION  CHANGE-CAUSE
 12        version 1.11
 ```
 
-rollout history 로 확인해보면 배포가 진행되지 않았다는 것을 알 수 있다.
-
+rollout history 로 확인해보면 배포가 진행되지 않았다는 것을 알 수 있다.  
 → annotations에 작성한 version 1.12 이 기록되지 않는다.
 
 업데이트를 pause  시켰으므로 디플로이먼트 작업이 진행되지 않는것이다.
