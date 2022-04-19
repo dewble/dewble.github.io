@@ -34,7 +34,7 @@ DaemonSet은 보통 로그 수집기를 실행하거나 노드를 모니터링�
 
 로그 수집기를 실행하는 데몬세트 설정
 
-```bash
+```yaml
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
@@ -127,7 +127,7 @@ RollinUpdate이므로 파드를 즉시 재시작한다.
 
 ### OnDelete 로 변경
 
-```bash
+```yaml
 # 중략
 spec:
       containers:
