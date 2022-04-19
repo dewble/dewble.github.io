@@ -20,8 +20,6 @@ toc_label: Contents
 popular: true
 ---
 <center><img src="/assets/images/posts/kubernetes/daemonset/daemonset.png" width="150%"></center>  
-
-  
 DaemonSet은 보통 로그 수집기를 실행하거나 노드를 모니터링하는 모니터링용 데몬 등 ***클러스터 전체에 항상 실행***시켜두어야 하는 파드에 사용한다.
 
 클러스터 전체 노드에 특정 파드를 실행할 때 사용하는 컨트롤러
