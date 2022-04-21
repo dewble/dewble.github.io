@@ -11,6 +11,7 @@ tag:
 - Deployment
 - Rollback
 - Rolling Update
+- Update Strategy
 categories:
 - Kubernetes
 toc: true
