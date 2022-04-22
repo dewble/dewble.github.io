@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Concept\)레플리카세트(ReplicaSet)
+title: \[Kubernetes\]\(Concept\)What is ReplicaSet(레플리카세트)
 layout: single
 author_profile: true
 read_time: true

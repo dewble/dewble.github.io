@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Concept\)스테이트풀세트(StatefulSet)
+title: \[Kubernetes\]\(Concept\)What is StatefulSet(스테이트풀세트)
 layout: single
 author_profile: true
 read_time: true
