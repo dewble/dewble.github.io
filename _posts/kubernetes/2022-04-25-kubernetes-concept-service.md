@@ -42,7 +42,7 @@ popular: true
 
 서비스 → L4 영역 통신에서 사용
 
-인그레스 → L7 영역 통신에서 사용
+인그레스 → L7 영역 통신에서 사용  
 
 <center><img src="/assets/images/posts/kubernetes/service/concept-of-service.png" width="150%" ></center>  
 
