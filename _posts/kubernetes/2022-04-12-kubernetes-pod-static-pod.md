@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Pod\)Static pods
+title: \[Kubernetes\]\(Pod\)Kubernetes Static pods
 layout: single
 author_profile: true
 read_time: true

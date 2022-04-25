@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Concept\)Namespace - 쿠버네티스 리소스 분리
+title: \[Kubernetes\]\(Concept\)Kubernetes Namespace - 쿠버네티스 리소스 분리
 layout: single
 author_profile: true
 read_time: true

@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Pod\)Resource Management for Pods and Containers
+title: \[Kubernetes\]\(Pod\)Kubernetes Resource Management for Pods and Containers
 layout: single
 author_profile: true
 read_time: true

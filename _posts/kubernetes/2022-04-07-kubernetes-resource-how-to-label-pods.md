@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Resource\)How to label pods
+title: \[Kubernetes\]\(Resource\)How to label Kubernetes pods
 layout: single
 author_profile: true
 read_time: true

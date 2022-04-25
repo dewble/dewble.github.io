@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Concept\)What is Job(잡)
+title: \[Kubernetes\]\(Concept\)What is a Kubernetes Job(잡)
 layout: single
 author_profile: true
 read_time: true

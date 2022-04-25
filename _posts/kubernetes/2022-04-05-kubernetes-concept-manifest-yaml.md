@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Concept\)매니페스트 파일(yaml)
+title: \[Kubernetes\]\(Concept\)Kubernetes Manifest file - 매니페스트 파일(yaml)
 layout: single
 author_profile: true
 read_time: true

@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Ingress\)Custom nginx ingress errors
+title: \[Kubernetes\]\(Ingress\)Custom Kubernetes nginx ingress errors
 layout: single
 author_profile: true
 read_time: true

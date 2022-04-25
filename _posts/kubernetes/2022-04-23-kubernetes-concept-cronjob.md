@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Concept\)What is CronJob(크론잡)
+title: \[Kubernetes\]\(Concept\)What is a Kubernetes CronJob(크론잡)
 layout: single
 author_profile: true
 read_time: true

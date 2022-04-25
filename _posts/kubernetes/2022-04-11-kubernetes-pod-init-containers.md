@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Pod\)Init Containers - 초기화 컨테이너
+title: \[Kubernetes\]\(Pod\)Kubernetes Init Containers - 초기화 컨테이너
 layout: single
 author_profile: true
 read_time: true

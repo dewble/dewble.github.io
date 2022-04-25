@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Registry\)Pull an Image from a Private Registry
+title: \[Kubernetes\]\(Registry\)Pull an Image from a Private Registry in Kubernetes
 layout: single
 author_profile: true
 read_time: true

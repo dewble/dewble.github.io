@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Concept\)What is Deployment(디플로이먼트)
+title: \[Kubernetes\]\(Concept\)What is Kubernetes Deployment(디플로이먼트)
 layout: single
 author_profile: true
 read_time: true

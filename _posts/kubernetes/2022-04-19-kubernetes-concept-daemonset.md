@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Concept\)What is DaemonSet(데몬세트)
+title: \[Kubernetes\]\(Concept\)What is Kubernetes DaemonSet(데몬세트)
 layout: single
 author_profile: true
 read_time: true

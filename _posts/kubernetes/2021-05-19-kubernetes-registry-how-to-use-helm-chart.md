@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Registry\)Understand how to use helm chart
+title: \[Kubernetes\]\(Registry\)Understand how to use helm chart in Kubernetes
 layout: single
 author_profile: true
 read_time: true

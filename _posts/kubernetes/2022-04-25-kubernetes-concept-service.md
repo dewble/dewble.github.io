@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Concept\)What is a Service
+title: \[Kubernetes\]\(Concept\)What is Kubernetes Service 
 layout: single
 author_profile: true
 read_time: true

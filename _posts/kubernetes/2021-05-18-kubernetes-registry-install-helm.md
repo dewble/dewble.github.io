@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Registry\)Install helm
+title: \[Kubernetes\]\(Registry\)Install helm in CentOS 
 layout: single
 author_profile: true
 read_time: true

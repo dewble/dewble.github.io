@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Concept\)What is a workload resources?
+title: \[Kubernetes\]\(Concept\)What is a Kubernetes Workload resources?
 layout: single
 author_profile: true
 read_time: true

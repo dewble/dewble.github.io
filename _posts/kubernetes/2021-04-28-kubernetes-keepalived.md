@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Kubeadm\)HA Configuration1-keepalived
+title: \[Kubernetes\]\(Kubeadm\)HA Configuration1-keepalived in CentOS
 layout: single
 author_profile: true
 read_time: true

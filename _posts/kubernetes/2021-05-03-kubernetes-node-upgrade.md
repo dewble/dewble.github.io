@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Node\)Drain and Uncordon for node upgrade
+title: \[Kubernetes\]\(Node\)Drain and Uncordon for node upgrade in Kubernetes
 layout: single
 author_profile: true
 read_time: true

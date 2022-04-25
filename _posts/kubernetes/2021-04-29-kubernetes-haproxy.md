@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Kubeadm\)HA Configuration2-HAProxy
+title: \[Kubernetes\]\(Kubeadm\)HA Configuration2-HAProxy in CentOS
 layout: single
 author_profile: true
 read_time: true

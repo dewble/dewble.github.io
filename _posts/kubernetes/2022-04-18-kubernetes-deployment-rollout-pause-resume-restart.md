@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Deployment\)Pausing and Resuming a rollout of a Deployment - 디플로이먼트 배포 일시 중지, 배포 재개, 재시작하기
+title: \[Kubernetes\]\(Deployment\)Kubernetes Deplyoment Pausing and Resuming a rollout of a Deployment - 디플로이먼트 배포 일시 중지, 배포 재개, 재시작하기
 layout: single
 author_profile: true
 read_time: true

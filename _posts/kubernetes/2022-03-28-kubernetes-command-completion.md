@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Command\)kubectl command 자동 완성
+title: \[Kubernetes\]\(Command\)Kubernetes kubectl command 자동 완성
 layout: single
 author_profile: true
 read_time: true

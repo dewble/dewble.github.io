@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Registry\)Install harbor with helm chart
+title: \[Kubernetes\]\(Registry\)Install harbor with helm chart in Kubernetes
 layout: single
 author_profile: true
 read_time: true

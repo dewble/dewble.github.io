@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Monitoring\)Health checks using api
+title: \[Kubernetes\]\(Monitoring\)Kubernetes Health checks using api
 layout: single
 author_profile: true
 read_time: true

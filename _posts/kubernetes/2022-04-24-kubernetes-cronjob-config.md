@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(CronJob\)How to use CronJob
+title: \[Kubernetes\]\(CronJob\)How to use Kubernetes CronJob
 layout: single
 author_profile: true
 read_time: true

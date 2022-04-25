@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Monitoring\)Install WEB UI Dashboard
+title: \[Kubernetes\]\(Monitoring\)Install Kubernetes WEB UI Dashboard
 layout: single
 author_profile: true
 read_time: true

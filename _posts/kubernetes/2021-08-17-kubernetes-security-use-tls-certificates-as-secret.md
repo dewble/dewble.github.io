@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Security\)Use TLS certificates as secret
+title: \[Kubernetes\]\(Security\)Use TLS certificates as secret in Kubernetes
 layout: single
 author_profile: true
 read_time: true

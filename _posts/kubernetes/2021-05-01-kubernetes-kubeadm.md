@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Kubeadm\)HA Configuration3-Kubeadm
+title: \[Kubernetes\]\(Kubeadm\)HA Configuration3-Kubeadm in CentOS
 layout: single
 author_profile: true
 read_time: true

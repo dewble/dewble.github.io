@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Command\)Check cluster IPs range
+title: \[Kubernetes\]\(Command\)Kubernetes Check cluster IPs range
 layout: single
 author_profile: true
 read_time: true

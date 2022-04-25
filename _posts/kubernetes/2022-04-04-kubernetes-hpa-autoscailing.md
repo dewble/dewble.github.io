@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(HPA\)What is Horizontal Pod Autoscaler (HPA)
+title: \[Kubernetes\]\(HPA\)What is Kubernetes Horizontal Pod Autoscaler (HPA)
 layout: single
 author_profile: true
 read_time: true

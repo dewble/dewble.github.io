@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Logging\)Install EFK for kubernetes logging with helm chart
+title: \[Kubernetes\]\(Logging\)Install EFK for kubernetes logging with helm chart in Kubernetes
 layout: single
 author_profile: true
 read_time: true

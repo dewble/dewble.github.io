@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Pod\)PODs Design Patterns - POD 구성 패턴
+title: \[Kubernetes\]\(Pod\)Kubernetes PODs Design Patterns - POD 구성 패턴
 layout: single
 author_profile: true
 read_time: true

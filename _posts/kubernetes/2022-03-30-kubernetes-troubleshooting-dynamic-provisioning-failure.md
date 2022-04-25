@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Troubleshooting\)Dynamic provisioning failure
+title: \[Kubernetes\]\(Troubleshooting\)Kubernetes Dynamic provisioning failure
 layout: single
 author_profile: true
 read_time: true

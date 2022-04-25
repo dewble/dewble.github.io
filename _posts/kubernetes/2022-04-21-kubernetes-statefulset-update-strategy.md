@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(StatuefulSet\)Update strategy
+title: \[Kubernetes\]\(StatuefulSet\)Kubernetes StatefulSet Update strategy
 layout: single
 author_profile: true
 read_time: true

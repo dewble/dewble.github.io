@@ -1,5 +1,5 @@
 ---
-title: \[Kubernetes\]\(Deployment\)Rolling Back a Deployment - 디플로이먼트 롤백
+title: \[Kubernetes\]\(Deployment\)Rolling Back a Kubernetes Deployment - 디플로이먼트 롤백
 layout: single
 author_profile: true
 read_time: true
