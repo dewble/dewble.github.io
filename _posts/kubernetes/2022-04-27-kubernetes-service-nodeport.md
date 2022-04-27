@@ -19,7 +19,6 @@ toc_label: Contents
 popular: true
 ---
 <center><img src="/assets/images/posts/kubernetes/service/service-nodeport-1.png" width="150%" ></center>  
-
 사용자는 서비스(NodePort)를 통해 모든 노드의 지정된 포트로 파드에 접근할 수 있다.
 
 클러스터 외부에서 클러스터 안 파드로 접근할 때 사용할 수 있는 가장 간단한 방법이다.

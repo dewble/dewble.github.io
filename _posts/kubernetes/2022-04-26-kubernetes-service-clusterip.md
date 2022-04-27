@@ -19,7 +19,6 @@ toc_label: Contents
 popular: true
 ---
 <center><img src="/assets/images/posts/kubernetes/service/service-clusterip.png" width="150%" ></center>  
-
 사용자는 서비스IP(ClusterIP)로 파드에 바로 접근할 수 없고 같은 클러스터안의 ***파드나 노드에서*** 접근할 수 있다.
 
 기본 서비스 타입. 쿠버네티스 클러스터 안에서만 사용할 수 있다.
