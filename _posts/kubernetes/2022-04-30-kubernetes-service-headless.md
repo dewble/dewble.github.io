@@ -32,7 +32,7 @@ popular: true
 
 # Example - headless
 
-```bash
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -90,4 +90,4 @@ headless-service.default.svc.cluster.local
 ---
 
 > [https://kubernetes.io/ko/docs/concepts/services-networking/service/#헤드리스-headless-서비스](https://kubernetes.io/ko/docs/concepts/services-networking/service/#%ED%97%A4%EB%93%9C%EB%A6%AC%EC%8A%A4-headless-%EC%84%9C%EB%B9%84%EC%8A%A4)
->
+> 
