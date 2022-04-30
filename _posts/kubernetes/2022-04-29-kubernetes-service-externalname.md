@@ -18,7 +18,7 @@ toc_sticky: true
 toc_label: Contents
 popular: true
 ---
-<center><img src="/assets/images/posts/kubernetes/service/service-externalname.png" width="150%" ></center>
+<center><img src="/assets/images/posts/kubernetes/service/service-externalname.png" width="100%" ></center>
 값과 함께 CNAME 레코드를 리턴하여, 서비스를 externalName 필드의 콘텐츠 (예:foo.bar.example.com
 )에 매핑한다. 어떤 종류의 프록시도 설정되어 있지 않다.
 
@@ -31,7 +31,7 @@ popular: true
 
 # Example - ExternalName
 
-```bash
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -52,3 +52,8 @@ externalname-service        ExternalName   <none>          google.com    <none> 
 - default 네임스페이스의 externalname-service 라는 서비스를 google.com에 매핑한다.
     - externalname-service 서비스로 들어오는 모든 요청을 google.com으로 포워딩 해준다.
 - EXTERNAL-IP 항목이 앞서 설정한 값으로 지정된다.
+
+---
+
+> [https://kubernetes.io/ko/docs/concepts/services-networking/service/#externalname](https://kubernetes.io/ko/docs/concepts/services-networking/service/#externalname)
+>
