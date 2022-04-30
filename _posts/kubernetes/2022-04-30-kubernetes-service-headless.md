@@ -50,7 +50,7 @@ spec:
 
 `.spec.clusterIP`: None
 
-### 서비스 확인
+### 서비스 확인 
 
 ```bash
 $ kubectl get svc
